@@ -7,7 +7,7 @@ class CreatePeople < ActiveRecord::Migration
       t.string :job
       t.text   :bio
       t.string :gender
-      t.Date   :birthdate
+      t.date   :birthdate
       t.string :picture
 
       t.timestamps null: false
