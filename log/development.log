@@ -104,3 +104,356 @@ Processing by PeopleController#create as HTML
   Rendered people/_form.html.erb (12.4ms)
   Rendered people/new.html.erb within layouts/application (13.9ms)
 Completed 200 OK in 83ms (Views: 56.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2015-10-23 16:06:12 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kB1nZ94ETl95b9zxfeqdeQqhzBTjtr7S+g3BqXI4JWGRbbo1gol0Nf/tlILNTUvpfeqluMhfRrUMVt3bpUQofA==", "person"=>{"first_name"=>"Giuli", "last_name"=>"Perry", "email"=>"perry.giu@gmail.com", "job"=>"Software Engineer", "bio"=>"This is my story.", "gender"=>"f", "birthdate"=>"1988/08/03", "picture"=>"http://images.forwallpaper.com/files/thumbs/preview/99/998652__betty-boop-and-her-dog_p.jpg"}, "commit"=>"Create Person"}
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'perry.giu@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`) VALUES ('Giuli', 'Perry', 'perry.giu@gmail.com', 'Software Engineer', 'This is my story.', 'f', '1988-08-03', 'http://images.forwallpaper.com/files/thumbs/preview/99/998652__betty-boop-and-her-dog_p.jpg', '2015-10-23 22:06:12', '2015-10-23 22:06:12')
+  [1m[36m (4.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/people/1
+Completed 302 Found in 48ms (ActiveRecord: 9.7ms)
+
+
+Started GET "/people/1" for 127.0.0.1 at 2015-10-23 16:06:12 -0600
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPerson Load (1.0ms)[0m  SELECT  `people`.* FROM `people` WHERE `people`.`id` = 1 LIMIT 1
+  Rendered people/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 174ms (Views: 164.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-23 16:06:12 -0600
+
+
+Started GET "/assets/scaffolds.self-159991b22a6fb169c4da39ad79759be8de309e9d2da68eedfeb40c4a118173b4.css?body=1" for 127.0.0.1 at 2015-10-23 16:06:12 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-10-23 16:06:12 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-23 16:06:12 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-23 16:06:12 -0600
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-23 16:06:12 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-23 16:06:12 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-23 16:06:12 -0600
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-23 16:06:24 -0600
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT `people`.* FROM `people`[0m
+  Rendered people/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/people/new" for 127.0.0.1 at 2015-10-23 16:10:37 -0600
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (13.7ms)
+  Rendered people/new.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2015-10-23 16:11:12 -0600
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x5cW7WjU55UnqZyqsVrv/9419+0TK/Y8RyZxSATJqmzG58u/NFnd/6Er1NkB/TlvqX6eQTjCDluxfW0607WncQ==", "person"=>{"first_name"=>"test", "last_name"=>"user", "email"=>"something", "job"=>"", "bio"=>"", "gender"=>"m", "birthdate"=>"2016-09-18", "picture"=>"some picture"}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'something' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered people/_form.html.erb (7.5ms)
+  Rendered people/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 71ms (Views: 63.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2015-10-23 16:11:35 -0600
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z1GkZo6fwfuJEzEm+GZYUXNWGC3dmAJsjYEjIVfxzzZmIXk00hL7kQ+ReVVIwY7BBB1xgfZx+gt72j9TgI3CKw==", "person"=>{"first_name"=>"test", "last_name"=>"user", "email"=>"something", "job"=>"", "bio"=>"", "gender"=>"p", "birthdate"=>"2016-09-18", "picture"=>"some picture"}, "commit"=>"Create Person"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.2ms)[0m  SELECT  1 AS one FROM `people` WHERE `people`.`email` = 'something' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered people/_form.html.erb (8.8ms)
+  Rendered people/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 52ms (Views: 44.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2015-10-23 16:12:07 -0600
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"994m365inhN7w+QbLWlNx0Zp82VP85RXB48k5h1QZtD2rvuN8u+kef1BrGidzptXMSKayWQabDDx1DiUyixrzQ==", "person"=>{"first_name"=>"test", "last_name"=>"user", "email"=>"something", "job"=>"", "bio"=>"", "gender"=>"p", "birthdate"=>"8932", "picture"=>"some picture"}, "commit"=>"Create Person"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'something' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  Rendered people/_form.html.erb (7.7ms)
+  Rendered people/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 68ms (Views: 56.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2015-10-23 16:25:16 -0600
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xBIkDU+iN80yAHDRQXflWqoQK8YG59qHZ5cEPGk7yWPFYvlfEy8Np7SCOKLx0DPK3VtCai0OIuCRzBhOvkfEfg==", "person"=>{"first_name"=>"test", "last_name"=>"user", "email"=>"something@email.com", "job"=>"N/A", "bio"=>"this is a test.", "gender"=>"u", "birthdate"=>"1980/06/06", "picture"=>"http://www.online-dating-mastery.com/images/dating_profile_example_odm1253.jpg"}, "commit"=>"Create Person"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.3ms)[0m  SELECT  1 AS one FROM `people` WHERE `people`.`email` = 'something@email.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`) VALUES ('test', 'user', 'something@email.com', 'N/A', 'this is a test.', 'u', '1980-06-06', 'http://www.online-dating-mastery.com/images/dating_profile_example_odm1253.jpg', '2015-10-23 22:25:16', '2015-10-23 22:25:16')[0m
+  [1m[35m (13.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/people/2
+Completed 302 Found in 21ms (ActiveRecord: 14.4ms)
+
+
+Started GET "/people/2" for 127.0.0.1 at 2015-10-23 16:25:16 -0600
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1[0m
+  Rendered people/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 51ms (Views: 49.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-23 16:25:24 -0600
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT `people`.* FROM `people`
+  Rendered people/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 59ms (Views: 58.0ms | ActiveRecord: 0.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to ChangeBirthdateToNotNull (20151023230344)
+  [1m[35m (50.1ms)[0m  ALTER TABLE `people` CHANGE `birthdate` `birthdate` date NOT NULL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20151023230344')
+  [1m[36m (7.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.5ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'people_system_dev'
+  AND fk.table_name = 'people'
+[0m
+  [1m[35m (0.3ms)[0m  SHOW CREATE TABLE `people`
+
+
+Started GET "/people/new" for 127.0.0.1 at 2015-10-23 17:07:29 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (30.1ms)
+  Rendered people/new.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 251ms (Views: 221.9ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2015-10-23 17:08:13 -0600
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WCRPh+Bv59eBwE8kIeRqmVY3ah1mrpJhPBrMVKBVSaRZVJLVvOLdvQdCB1eRQ7wJIXwDsU1HagbKQdAmdylEuQ==", "person"=>{"first_name"=>"another", "last_name"=>"user", "email"=>"user@gmail.com", "job"=>"", "bio"=>"", "gender"=>"m", "birthdate"=>"1990/02/09", "picture"=>"http://images.com/img1.png"}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'user@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`) VALUES ('another', 'user', 'user@gmail.com', '', '', 'm', '1990-02-09', 'http://images.com/img1.png', '2015-10-23 23:08:13', '2015-10-23 23:08:13')
+  [1m[36m (3.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/people/3
+Completed 302 Found in 21ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/people/3" for 127.0.0.1 at 2015-10-23 17:08:13 -0600
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPerson Load (0.6ms)[0m  SELECT  `people`.* FROM `people` WHERE `people`.`id` = 3 LIMIT 1
+  Rendered people/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 43ms (Views: 36.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-23 17:08:16 -0600
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT `people`.* FROM `people`[0m
+  Rendered people/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/people/3/edit" for 127.0.0.1 at 2015-10-23 17:09:01 -0600
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  `people`.* FROM `people` WHERE `people`.`id` = 3 LIMIT 1
+  Rendered people/_form.html.erb (3.8ms)
+  Rendered people/edit.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-23 17:09:07 -0600
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT `people`.* FROM `people`[0m
+  Rendered people/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 51ms (Views: 50.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (9.1ms)[0m  [1mDROP TABLE `people` CASCADE[0m
+  [1m[35m (11.5ms)[0m  CREATE TABLE `people` (`id` int(11) auto_increment PRIMARY KEY, `first_name` varchar(75) NOT NULL, `last_name` varchar(75) NOT NULL, `email` varchar(254) NOT NULL, `job` varchar(255), `bio` text, `gender` varchar(1), `birthdate` date NOT NULL, `picture` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (26.7ms)[0m  [1mCREATE UNIQUE INDEX `index_people_on_email` USING btree ON `people` (`email`) [0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36m (10.4ms)[0m  [1mCREATE TABLE `people` (`id` int(11) auto_increment PRIMARY KEY, `first_name` varchar(75) NOT NULL, `last_name` varchar(75) NOT NULL, `email` varchar(254) NOT NULL, `job` varchar(255), `bio` text, `gender` varchar(1), `birthdate` date NOT NULL, `picture` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (21.0ms)[0m  CREATE UNIQUE INDEX `index_people_on_email` USING btree ON `people` (`email`) 
+  [1m[36m (10.7ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (24.2ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (3.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151023230344')
+  [1m[36m (3.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20151023193427')[0m
+  [1m[35m (3.9ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20151023085432')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Jesse+Smith@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Jesse', 'Smith', 'Jesse+Smith@example.com', 'f', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '1964-09-06', '2015-10-23 23:43:41', '2015-10-23 23:43:41')
+  [1m[36m (5.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Dani+Villalobos@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Dani', 'Villalobos', 'Dani+Villalobos@example.com', 'f', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '1971-07-26', '2015-10-23 23:43:41', '2015-10-23 23:43:41')
+  [1m[36m (5.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Ariel+Schrader@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Ariel', 'Schrader', 'Ariel+Schrader@example.com', 'u', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '1983-02-13', '2015-10-23 23:43:41', '2015-10-23 23:43:41')
+  [1m[36m (6.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Jesse+Masters@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Jesse', 'Masters', 'Jesse+Masters@example.com', 'f', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '1985-02-24', '2015-10-23 23:43:41', '2015-10-23 23:43:41')
+  [1m[36m (6.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Jaden+Rodriguez@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Jaden', 'Rodriguez', 'Jaden+Rodriguez@example.com', 'f', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '1983-11-05', '2015-10-23 23:43:41', '2015-10-23 23:43:41')
+  [1m[36m (6.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Angel+Starkey@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Angel', 'Starkey', 'Angel+Starkey@example.com', 'm', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '2006-10-28', '2015-10-23 23:43:41', '2015-10-23 23:43:41')
+  [1m[36m (6.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Cameron+Perry@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Cameron', 'Perry', 'Cameron+Perry@example.com', 'f', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '2002-06-20', '2015-10-23 23:43:41', '2015-10-23 23:43:41')
+  [1m[36m (8.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Cameron+Rodriguez@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Cameron', 'Rodriguez', 'Cameron+Rodriguez@example.com', 'm', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '1997-11-10', '2015-10-23 23:43:41', '2015-10-23 23:43:41')
+  [1m[36m (10.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Dani+Masters@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Dani', 'Masters', 'Dani+Masters@example.com', 'u', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '1989-04-24', '2015-10-23 23:43:41', '2015-10-23 23:43:41')
+  [1m[36m (8.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Alex+Schrader@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Alex', 'Schrader', 'Alex+Schrader@example.com', 'f', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '1977-09-19', '2015-10-23 23:43:41', '2015-10-23 23:43:41')
+  [1m[36m (10.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Jaden+Masters@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Jaden', 'Masters', 'Jaden+Masters@example.com', 'f', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '1960-03-30', '2015-10-23 23:43:41', '2015-10-23 23:43:41')
+  [1m[36m (10.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Germaine+Masters@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Germaine', 'Masters', 'Germaine+Masters@example.com', 'f', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '1998-01-28', '2015-10-23 23:43:41', '2015-10-23 23:43:41')
+  [1m[36m (8.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Germaine+Torres@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Germaine', 'Torres', 'Germaine+Torres@example.com', 'm', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '1977-09-20', '2015-10-23 23:43:41', '2015-10-23 23:43:41')
+  [1m[36m (9.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Jesse+Starkey@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Jesse', 'Starkey', 'Jesse+Starkey@example.com', 'u', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '2014-06-26', '2015-10-23 23:43:41', '2015-10-23 23:43:41')
+  [1m[36m (9.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Dani+Torres@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Dani', 'Torres', 'Dani+Torres@example.com', 'u', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '1981-08-31', '2015-10-23 23:43:41', '2015-10-23 23:43:41')
+  [1m[36m (7.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Germaine+Rodriguez@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Germaine', 'Rodriguez', 'Germaine+Rodriguez@example.com', 'm', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '1981-08-29', '2015-10-23 23:43:41', '2015-10-23 23:43:41')
+  [1m[36m (7.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Tori+Masters@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Tori', 'Masters', 'Tori+Masters@example.com', 'f', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '1977-04-14', '2015-10-23 23:43:41', '2015-10-23 23:43:41')
+  [1m[36m (9.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Dani+Starkey@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Dani', 'Starkey', 'Dani+Starkey@example.com', 'u', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '1985-01-13', '2015-10-23 23:43:41', '2015-10-23 23:43:41')
+  [1m[36m (7.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Cameron+Schrader@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Cameron', 'Schrader', 'Cameron+Schrader@example.com', 'f', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '2005-12-24', '2015-10-23 23:43:41', '2015-10-23 23:43:41')
+  [1m[36m (7.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Jaden+Masters@example.com' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Andrea+Masters@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Andrea', 'Masters', 'Andrea+Masters@example.com', 'u', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '1986-03-25', '2015-10-23 23:44:00', '2015-10-23 23:44:00')
+  [1m[36m (4.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Germaine+Smith@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Germaine', 'Smith', 'Germaine+Smith@example.com', 'm', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '1970-09-18', '2015-10-23 23:44:00', '2015-10-23 23:44:00')
+  [1m[36m (5.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Dani+Villalobos@example.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.6ms)[0m  SELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Reese+Starkey@example.com' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Reese', 'Starkey', 'Reese+Starkey@example.com', 'm', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '2006-04-13', '2015-10-23 23:44:00', '2015-10-23 23:44:00')[0m
+  [1m[35m (5.4ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.5ms)[0m  SELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Jesse+Torres@example.com' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Jesse', 'Torres', 'Jesse+Torres@example.com', 'u', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '1974-08-06', '2015-10-23 23:44:00', '2015-10-23 23:44:00')[0m
+  [1m[35m (5.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.5ms)[0m  SELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Cameron+Torres@example.com' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Cameron', 'Torres', 'Cameron+Torres@example.com', 'm', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '1983-06-23', '2015-10-23 23:44:00', '2015-10-23 23:44:00')[0m
+  [1m[35m (5.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.7ms)[0m  SELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Angel+Schrader@example.com' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Angel', 'Schrader', 'Angel+Schrader@example.com', 'm', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '1963-06-28', '2015-10-23 23:44:00', '2015-10-23 23:44:00')[0m
+  [1m[35m (5.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.5ms)[0m  SELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Germaine+Perry@example.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Germaine', 'Perry', 'Germaine+Perry@example.com', 'u', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '2003-05-03', '2015-10-23 23:44:00', '2015-10-23 23:44:00')[0m
+  [1m[35m (5.5ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.6ms)[0m  SELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Alex+Villalobos@example.com' LIMIT 1
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Alex', 'Villalobos', 'Alex+Villalobos@example.com', 'm', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '1960-06-23', '2015-10-23 23:44:00', '2015-10-23 23:44:00')[0m
+  [1m[35m (6.0ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.5ms)[0m  SELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Cameron+Masters@example.com' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Cameron', 'Masters', 'Cameron+Masters@example.com', 'u', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '2012-07-04', '2015-10-23 23:44:00', '2015-10-23 23:44:00')[0m
+  [1m[35m (4.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.3ms)[0m  SELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Jesse+Starkey@example.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Ariel+Torres@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Ariel', 'Torres', 'Ariel+Torres@example.com', 'm', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '1978-01-30', '2015-10-23 23:44:00', '2015-10-23 23:44:00')
+  [1m[36m (3.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Angel+Schrader@example.com' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.5ms)[0m  SELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Angel+Masters@example.com' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Angel', 'Masters', 'Angel+Masters@example.com', 'f', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '2006-12-16', '2015-10-23 23:44:00', '2015-10-23 23:44:00')[0m
+  [1m[35m (4.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.6ms)[0m  SELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Andrea+Villalobos@example.com' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Andrea', 'Villalobos', 'Andrea+Villalobos@example.com', 'f', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '1978-12-04', '2015-10-23 23:44:00', '2015-10-23 23:44:00')[0m
+  [1m[35m (4.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.4ms)[0m  SELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Alex+Villalobos@example.com' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Reese+Anderson@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Reese', 'Anderson', 'Reese+Anderson@example.com', 'u', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '1994-02-17', '2015-10-23 23:44:00', '2015-10-23 23:44:00')
+  [1m[36m (3.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Jaden+Torres@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Jaden', 'Torres', 'Jaden+Torres@example.com', 'f', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '1996-03-30', '2015-10-23 23:44:00', '2015-10-23 23:44:00')
+  [1m[36m (3.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Reese+Torres@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Reese', 'Torres', 'Reese+Torres@example.com', 'm', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '2008-09-07', '2015-10-23 23:44:00', '2015-10-23 23:44:00')
+  [1m[36m (4.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'Jaden+Smith@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `gender`, `bio`, `picture`, `birthdate`, `created_at`, `updated_at`) VALUES ('Jaden', 'Smith', 'Jaden+Smith@example.com', 'u', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', 'http://www.asthmamd.org/images/icon_user_1.png', '2011-02-07', '2015-10-23 23:44:00', '2015-10-23 23:44:00')
+  [1m[36m (3.3ms)[0m  [1mCOMMIT[0m
