@@ -17,3 +17,6 @@
 /tmp
 # Gedit temp files
 *~
+
+#dotenv file
+.env
