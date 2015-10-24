@@ -2154,3 +2154,177 @@ Processing by PeopleController#create as HTML
   Rendered people/_form.html.erb (10.0ms)
   Rendered people/new.html.erb within layouts/application (11.2ms)
 Completed 200 OK in 75ms (Views: 63.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2015-10-24 15:05:06 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YYweYcllrHSl6NbwnJ47UjRQ1xPAPwkLaJyfy4DXEy9g/MMzleiWHiNqnoMsOe3CQxu+v+vW8Wyex4O5V6seMg==", "person"=>{"first_name"=>"", "last_name"=>"", "email"=>"", "job"=>"", "bio"=>"", "gender"=>"", "birthdate"=>"", "picture"=>""}, "commit"=>"Create Person"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = '' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  Rendered people/_form.html.erb (12.4ms)
+  Rendered people/new.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 220ms (Views: 169.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-24 15:05:07 -0600
+
+
+Started GET "/assets/scaffolds.self-159991b22a6fb169c4da39ad79759be8de309e9d2da68eedfeb40c4a118173b4.css?body=1" for 127.0.0.1 at 2015-10-24 15:05:07 -0600
+
+
+Started GET "/assets/application.self-9c3518a54225a18c466ceefabcce2b794aa6027a2b4c1afb59a76583eb29454f.css?body=1" for 127.0.0.1 at 2015-10-24 15:05:07 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-24 15:05:07 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-24 15:05:07 -0600
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-24 15:05:07 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-24 15:05:07 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-24 15:05:07 -0600
+
+
+Started GET "/people/new" for 127.0.0.1 at 2015-10-24 15:05:16 -0600
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (3.6ms)
+  Rendered people/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/people/new" for 127.0.0.1 at 2015-10-24 15:05:54 -0600
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (7.0ms)
+  Rendered people/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 65ms (Views: 64.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-24 15:05:55 -0600
+
+
+Started GET "/assets/scaffolds.self-159991b22a6fb169c4da39ad79759be8de309e9d2da68eedfeb40c4a118173b4.css?body=1" for 127.0.0.1 at 2015-10-24 15:05:55 -0600
+
+
+Started GET "/assets/application.self-9c3518a54225a18c466ceefabcce2b794aa6027a2b4c1afb59a76583eb29454f.css?body=1" for 127.0.0.1 at 2015-10-24 15:05:55 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-24 15:05:55 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-24 15:05:55 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-24 15:05:55 -0600
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-24 15:05:55 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-24 15:05:55 -0600
+
+
+Started POST "/people" for 127.0.0.1 at 2015-10-24 15:06:54 -0600
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S5Y0PEMyFvK5/4s3QqB0BZKjL912gkP9dv6lFuuC46VK5uluH78smD99w0TyB6KV5ehGcV1ru5qApblkPP7uuA==", "person"=>{"first_name"=>"giuli", "last_name"=>"perry", "email"=>"perry.giu@gmail.com", "job"=>"some job", "bio"=>"", "birthdate"=>"1988/08/03", "picture"=>""}, "commit"=>"Create Person"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.3ms)[0m  SELECT  1 AS one FROM `people` WHERE `people`.`email` = 'perry.giu@gmail.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `birthdate`, `picture`, `created_at`, `updated_at`) VALUES ('giuli', 'perry', 'perry.giu@gmail.com', 'some job', '', '1988-08-03', '', '2015-10-24 21:06:54', '2015-10-24 21:06:54')[0m
+  [1m[35m (3.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/people/51
+Completed 302 Found in 12ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/people/51" for 127.0.0.1 at 2015-10-24 15:06:54 -0600
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 51 LIMIT 1[0m
+  Rendered people/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 39ms (Views: 33.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-24 15:11:05 -0600
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (1.5ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 76ms (Views: 71.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-24 15:11:08 -0600
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC[0m
+  Rendered people/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 66ms (Views: 65.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-24 15:11:08 -0600
+
+
+Started GET "/assets/scaffolds.self-159991b22a6fb169c4da39ad79759be8de309e9d2da68eedfeb40c4a118173b4.css?body=1" for 127.0.0.1 at 2015-10-24 15:11:08 -0600
+
+
+Started GET "/assets/application.self-9c3518a54225a18c466ceefabcce2b794aa6027a2b4c1afb59a76583eb29454f.css?body=1" for 127.0.0.1 at 2015-10-24 15:11:08 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-24 15:11:08 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-24 15:11:08 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-24 15:11:08 -0600
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-24 15:11:08 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-24 15:11:08 -0600
+
+
+Started GET "/people/new" for 127.0.0.1 at 2015-10-24 15:11:15 -0600
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (12.1ms)
+  Rendered people/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2015-10-24 15:11:24 -0600
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zp9PjWcQ9rCB9TVDWEvJCo5jSUuX/a8fGWms0TdwQA9n75LfO53M2gd3fTDo7B+a+Sgg57wUV3jvMrCj4AxNEg==", "person"=>{"first_name"=>"", "last_name"=>"", "email"=>"", "job"=>"", "bio"=>"", "birthdate"=>"", "picture"=>""}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered people/_form.html.erb (11.8ms)
+  Rendered people/new.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 69ms (Views: 61.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-24 15:15:08 -0600
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC[0m
+  Rendered people/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 49ms (Views: 47.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/people/new" for 127.0.0.1 at 2015-10-24 15:15:12 -0600
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (13.9ms)
+  Rendered people/new.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 55ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2015-10-24 15:15:17 -0600
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iVpzLeTZ2gKJaJCY/IYYUPbScocGG4oQ5HcLTu/HNpyIKq5/uFTgaA/q2OtMIc7AgZkbKy3ycncSLBc8OLs7gQ==", "person"=>{"first_name"=>"", "last_name"=>"", "email"=>"", "job"=>"", "bio"=>"", "gender"=>"m", "birthdate"=>"", "picture"=>""}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered people/_form.html.erb (10.8ms)
+  Rendered people/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 66ms (Views: 60.0ms | ActiveRecord: 0.3ms)
