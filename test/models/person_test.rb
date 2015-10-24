@@ -1,7 +1,9 @@
-require 'test_helper'
+require 'minitest/autorun'
 
-class PersonTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+class PersonTest < Minitest::Test
+
+  def setup
+    @person = create(:person)
+  end
+
 end

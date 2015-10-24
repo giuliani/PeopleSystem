@@ -1,22 +1,22 @@
-require 'test_helper'
+require 'minitest/autorun'
 
-class PeopleControllerTest < ActionController::TestCase
-  setup do
+class PeopleControllerTest < Minitest::Test
+  def setup
     @person = create(:person)
   end
 
-  test "should get index" do
-    get :index
+  def should_get_index
+  get :index
     assert_response :success
     assert_not_nil assigns(:people)
   end
 
-  test "should get new" do
+  def should_get_new
     get :new
     assert_response :success
   end
 
-  test "should create person" do
+  def should_create_person
     @person.email = "different@email.com"
     assert_difference('Person.count') do
       post :create, person: { bio: @person.bio, birthdate: @person.birthdate, email: @person.email, first_name: @person.first_name, gender: @person.gender, job: @person.job, last_name: @person.last_name, picture: @person.picture }
@@ -25,22 +25,22 @@ class PeopleControllerTest < ActionController::TestCase
     assert_redirected_to person_path(assigns(:person))
   end
 
-  test "should show person" do
+  def should_show_person
     get :show, id: @person
     assert_response :success
   end
 
-  test "should get edit" do
+  def should_get_edit
     get :edit, id: @person
     assert_response :success
   end
 
-  test "should update person" do
+  def should_update_person
     patch :update, id: @person, person: { bio: @person.bio, birthdate: @person.birthdate, email: @person.email, first_name: @person.first_name, gender: @person.gender, job: @person.job, last_name: @person.last_name, picture: @person.picture }
     assert_redirected_to person_path(assigns(:person))
   end
 
-  test "should destroy person" do
+  def should_destroy_person
     assert_difference('Person.count', -1) do
       delete :destroy, id: @person
     end
