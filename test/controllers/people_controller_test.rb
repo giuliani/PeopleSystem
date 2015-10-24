@@ -17,6 +17,7 @@ class PeopleControllerTest < ActionController::TestCase
   end
 
   test "should create person" do
+    @person.email = "different@email.com"
     assert_difference('Person.count') do
       post :create, person: { bio: @person.bio, birthdate: @person.birthdate, email: @person.email, first_name: @person.first_name, gender: @person.gender, job: @person.job, last_name: @person.last_name, picture: @person.picture }
     end

@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-20.times do
+25.times do
   birthdate = rand(Date.civil(1960, 1, 1)..Date.civil(2015, 12, 31))
   icon = "http://www.asthmamd.org/images/icon_user_1.png"
   bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
@@ -16,5 +16,9 @@
   email = first_name + "+" + last_name + "@example.com"
   gender = %w( m f u ).sample
 
-  Person.create :first_name => first_name, :last_name => last_name, :email => email, :gender => gender, :bio => bio, :picture => icon, :birthdate => birthdate
+  begin
+    Person.create! :first_name => first_name, :last_name => last_name, :email => email, :gender => gender, :bio => bio, :picture => icon, :birthdate => birthdate
+  rescue ActiveRecord::RecordInvalid
+    puts "could not save user, duplicate email: #{email}, moving on..."
+  end
 end
