@@ -13,6 +13,17 @@ class Person < ActiveRecord::Base
   validate :birthdate_after_today
   validates_format_of :picture, :with => URI.regexp
 
+  def age
+    now = Time.now.utc.to_date
+    now.year - birthdate.year - ((now.month > birthdate.month || (now.month == birthdate.month && now.day >= birthdate.day)) ? 0 : 1)
+  end
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
+
+  private
+
   def birthdate_after_today
     errors.add(:birthdate, "can't be in the future") if
       !birthdate.blank? and birthdate > Date.today
