@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+ 
+ body{
+  background-image: url("http://urdu-mag.com/blog/wp-content/uploads/2012/11/large/abstract+backgrounds+6.jpg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  font-weight: bold;
+ }
