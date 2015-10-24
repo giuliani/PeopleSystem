@@ -2328,3 +2328,215 @@ Processing by PeopleController#create as HTML
   Rendered people/_form.html.erb (10.8ms)
   Rendered people/new.html.erb within layouts/application (11.7ms)
 Completed 200 OK in 66ms (Views: 60.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2015-10-24 15:16:17 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KVcbPO0s1txJW793J1eyrcPh2R2jt0EyaKibIeJgRqQoJ8ZusaHsts/Z9wSX8GQ9tKqwsYheuVWe84dTNRxLuQ==", "person"=>{"first_name"=>"", "last_name"=>"", "email"=>"", "job"=>"", "bio"=>"", "gender"=>"", "birthdate"=>"", "picture"=>""}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = '' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  Rendered people/_form.html.erb (13.9ms)
+  Rendered people/new.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 214ms (Views: 168.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-24 15:16:17 -0600
+
+
+Started GET "/assets/scaffolds.self-159991b22a6fb169c4da39ad79759be8de309e9d2da68eedfeb40c4a118173b4.css?body=1" for 127.0.0.1 at 2015-10-24 15:16:17 -0600
+
+
+Started GET "/assets/application.self-9c3518a54225a18c466ceefabcce2b794aa6027a2b4c1afb59a76583eb29454f.css?body=1" for 127.0.0.1 at 2015-10-24 15:16:17 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-24 15:16:17 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-24 15:16:17 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-24 15:16:17 -0600
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-24 15:16:17 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-24 15:16:17 -0600
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-24 15:19:51 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 192ms (Views: 176.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-24 15:19:51 -0600
+
+
+Started GET "/assets/scaffolds.self-159991b22a6fb169c4da39ad79759be8de309e9d2da68eedfeb40c4a118173b4.css?body=1" for 127.0.0.1 at 2015-10-24 15:19:51 -0600
+
+
+Started GET "/assets/application.self-9c3518a54225a18c466ceefabcce2b794aa6027a2b4c1afb59a76583eb29454f.css?body=1" for 127.0.0.1 at 2015-10-24 15:19:51 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-24 15:19:51 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-24 15:19:51 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-24 15:19:51 -0600
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-24 15:19:51 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-24 15:19:51 -0600
+
+
+Started GET "/people/new" for 127.0.0.1 at 2015-10-24 15:19:56 -0600
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (17.9ms)
+  Rendered people/new.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 56ms (Views: 54.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2015-10-24 15:20:25 -0600
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wiZfnL9wl3srbm4TK//jv9/mT9nkfIOUX3t9mQW5BYfDVoLO4/2tEa3sJmCbWDUvqK0mdc+Ve/OpIGHr0sUImg==", "person"=>{"first_name"=>"test", "last_name"=>"usr", "email"=>"usr@email.com", "job"=>"", "bio"=>"", "gender"=>"", "birthdate"=>"1987/09/02", "picture"=>""}, "commit"=>"Create Person"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.4ms)[0m  SELECT  1 AS one FROM `people` WHERE `people`.`email` = 'usr@email.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`) VALUES ('test', 'usr', 'usr@email.com', '', '', '', '1987-09-02', '', '2015-10-24 21:20:25', '2015-10-24 21:20:25')[0m
+  [1m[35m (6.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/people/52
+Completed 302 Found in 27ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/people/52" for 127.0.0.1 at 2015-10-24 15:20:25 -0600
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 52 LIMIT 1[0m
+  Rendered people/show.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+SyntaxError (/home/giuliani/PeopleSystem/app/views/people/show.html.erb:31: syntax error, unexpected ':', expecting keyword_then or ',' or ';' or '\n'
+      when "m":>
+               ^
+/home/giuliani/PeopleSystem/app/views/people/show.html.erb:33: syntax error, unexpected ':', expecting keyword_end
+      <% when "f": 
+                  ^
+/home/giuliani/PeopleSystem/app/views/people/show.html.erb:35: syntax error, unexpected keyword_when, expecting keyword_end
+'.freeze;       when "u": 
+                    ^
+/home/giuliani/PeopleSystem/app/views/people/show.html.erb:35: syntax error, unexpected ':', expecting keyword_end
+'.freeze;       when "u": 
+                         ^
+/home/giuliani/PeopleSystem/app/views/people/show.html.erb:37: syntax error, unexpected keyword_when, expecting keyword_end
+'.freeze;       when "": 
+                    ^
+/home/giuliani/PeopleSystem/app/views/people/show.html.erb:56: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/people/show.html.erb:31: syntax error, unexpected ':', expecting keyword_then or ',' or ';' or '\n'
+  app/views/people/show.html.erb:33: syntax error, unexpected ':', expecting keyword_end
+  app/views/people/show.html.erb:35: syntax error, unexpected keyword_when, expecting keyword_end
+  app/views/people/show.html.erb:35: syntax error, unexpected ':', expecting keyword_end
+  app/views/people/show.html.erb:37: syntax error, unexpected keyword_when, expecting keyword_end
+  app/views/people/show.html.erb:56: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.6ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.3ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (18.2ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (36.0ms)
+
+
+Started GET "/people/52" for 127.0.0.1 at 2015-10-24 15:21:14 -0600
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"52"}
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  `people`.* FROM `people` WHERE `people`.`id` = 52 LIMIT 1
+  Rendered people/show.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/home/giuliani/PeopleSystem/app/views/people/show.html.erb:33: syntax error, unexpected '<'
+      <% when "f" 
+       ^):
+  app/views/people/show.html.erb:33: syntax error, unexpected '<'
+
+
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.3ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.7ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (33.9ms)
+
+
+Started GET "/people/52" for 127.0.0.1 at 2015-10-24 15:21:30 -0600
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 52 LIMIT 1[0m
+  Rendered people/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-24 15:21:30 -0600
+
+
+Started GET "/assets/scaffolds.self-159991b22a6fb169c4da39ad79759be8de309e9d2da68eedfeb40c4a118173b4.css?body=1" for 127.0.0.1 at 2015-10-24 15:21:30 -0600
+
+
+Started GET "/assets/application.self-9c3518a54225a18c466ceefabcce2b794aa6027a2b4c1afb59a76583eb29454f.css?body=1" for 127.0.0.1 at 2015-10-24 15:21:30 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-24 15:21:30 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-24 15:21:30 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-24 15:21:30 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-24 15:21:30 -0600
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-24 15:21:30 -0600
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-24 15:21:38 -0600
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (1.8ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 53ms (Views: 50.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/people/8" for 127.0.0.1 at 2015-10-24 15:21:41 -0600
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 8 LIMIT 1[0m
+  Rendered people/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-24 15:21:57 -0600
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 46ms (Views: 44.0ms | ActiveRecord: 0.2ms)
