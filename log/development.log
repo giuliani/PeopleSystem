@@ -2612,3 +2612,5356 @@ Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 16:21:00 -0600
 
 
 Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 16:21:00 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-24 17:05:06 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.5ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (61.5ms)
+Completed 200 OK in 300ms (Views: 247.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/people/new" for 127.0.0.1 at 2015-10-24 17:05:11 -0600
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (19.0ms)
+  Rendered people/new.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 56ms (Views: 55.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2015-10-24 17:05:37 -0600
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WBF01s+D6wExG7Z7miKh2+wXLFsN4KhAj8b8GMzPkZ9ZYamEkw7Ra7eZ/ggqhXdLm1xF9yYJUCd5neBqG7Ocgg==", "person"=>{"first_name"=>"giuliani", "last_name"=>"perry", "email"=>"perryg.88@gmail.com", "job"=>"software engineer", "bio"=>"", "gender"=>"f", "birthdate"=>"1988/08/03", "picture"=>""}, "commit"=>"Create Person"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.2ms)[0m  SELECT  1 AS one FROM `people` WHERE `people`.`email` = 'perryg.88@gmail.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`) VALUES ('giuliani', 'perry', 'perryg.88@gmail.com', 'software engineer', '', 'f', '1988-08-03', '', '2015-10-24 23:05:37', '2015-10-24 23:05:37')[0m
+  [1m[35m (7.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/people/53
+Completed 302 Found in 29ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/people/53" for 127.0.0.1 at 2015-10-24 17:05:37 -0600
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"53"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 53 LIMIT 1[0m
+  Rendered people/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 51ms (Views: 45.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-24 17:05:43 -0600
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (1.9ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (83.6ms)
+Completed 200 OK in 174ms (Views: 170.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/resque" for 127.0.0.1 at 2015-10-24 17:05:47 -0600
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 17:05:47 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:05:47 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:05:47 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:05:47 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:05:47 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:05:47 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 17:05:48 -0600
+
+
+Started GET "/resque/queues/person_created_queue" for 127.0.0.1 at 2015-10-24 17:05:50 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:05:51 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:05:51 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:05:51 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:05:51 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:05:51 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-24 17:09:10 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 207ms (Views: 191.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/people/new" for 127.0.0.1 at 2015-10-24 17:09:18 -0600
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (96.9ms)
+  Rendered people/new.html.erb within layouts/application (113.6ms)
+Completed 200 OK in 281ms (Views: 278.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2015-10-24 17:09:57 -0600
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NqNBsWXiSixDWPJqg1LCuyury+V54I/4Bd5TIWicJmI305zjOW9wRsXauhkz9RQrXOCiSVIJd5/zhU9Tv+Arfw==", "person"=>{"first_name"=>"Jill", "last_name"=>"Rogers", "email"=>"thegirl@example.com", "job"=>"", "bio"=>"", "gender"=>"u", "birthdate"=>"1956/09/04", "picture"=>""}, "commit"=>"Create Person"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.3ms)[0m  SELECT  1 AS one FROM `people` WHERE `people`.`email` = 'thegirl@example.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`) VALUES ('Jill', 'Rogers', 'thegirl@example.com', '', '', 'u', '1956-09-04', '', '2015-10-24 23:09:57', '2015-10-24 23:09:57')[0m
+  [1m[35m (12.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/people/54
+Completed 302 Found in 32ms (ActiveRecord: 12.7ms)
+
+
+Started GET "/people/54" for 127.0.0.1 at 2015-10-24 17:09:57 -0600
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"54"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 54 LIMIT 1[0m
+  Rendered people/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 49ms (Views: 44.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-24 17:10:02 -0600
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (2.5ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (76.7ms)
+Completed 200 OK in 198ms (Views: 193.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/resque" for 127.0.0.1 at 2015-10-24 17:11:40 -0600
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 17:11:40 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:11:40 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:11:40 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:11:40 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:11:40 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:11:40 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 17:11:42 -0600
+
+
+Started GET "/resque/queues/person_created_queue" for 127.0.0.1 at 2015-10-24 17:11:46 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:11:46 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:11:46 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:11:46 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:11:46 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:11:46 -0600
+
+
+Started GET "/resque/workers" for 127.0.0.1 at 2015-10-24 17:12:20 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:12:20 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:12:20 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:12:20 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:12:20 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:12:20 -0600
+
+
+Started GET "/resque/workers/all" for 127.0.0.1 at 2015-10-24 17:12:22 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:12:22 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:12:22 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:12:22 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:12:22 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:12:22 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 17:12:22 -0600
+
+
+Started GET "/resque/failed" for 127.0.0.1 at 2015-10-24 17:12:25 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:12:25 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:12:25 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:12:25 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:12:25 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:12:25 -0600
+
+
+Started GET "/resque/working" for 127.0.0.1 at 2015-10-24 17:12:26 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:12:26 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:12:26 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:12:26 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:12:26 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:12:26 -0600
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 17:12:28 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:12:28 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:12:28 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:12:28 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:12:28 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:12:28 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 17:12:28 -0600
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 53 LIMIT 1[0m
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 54 LIMIT 1[0m
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 17:14:45 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:14:45 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:14:45 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:14:45 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:14:45 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:14:45 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 17:14:45 -0600
+
+
+Started GET "/resque/failed" for 127.0.0.1 at 2015-10-24 17:14:50 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:14:50 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:14:50 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:14:50 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:14:50 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:14:50 -0600
+
+
+Started POST "/resque/failed/requeue/all" for 127.0.0.1 at 2015-10-24 17:16:03 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+
+Started GET "/resque/failed" for 127.0.0.1 at 2015-10-24 17:16:04 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:16:04 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:16:04 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:16:04 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:16:04 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:16:04 -0600
+
+
+Started POST "/resque/failed/requeue/all" for 127.0.0.1 at 2015-10-24 17:16:12 -0600
+
+
+Started GET "/resque/failed" for 127.0.0.1 at 2015-10-24 17:16:12 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:16:12 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:16:12 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:16:12 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:16:12 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:16:12 -0600
+
+
+Started GET "/resque/failed" for 127.0.0.1 at 2015-10-24 17:16:13 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:16:14 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:16:14 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:16:14 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:16:14 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:16:14 -0600
+
+
+Started POST "/resque/failed/requeue/all" for 127.0.0.1 at 2015-10-24 17:16:15 -0600
+
+
+Started GET "/resque/failed" for 127.0.0.1 at 2015-10-24 17:16:15 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:16:15 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:16:15 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:16:15 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:16:15 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:16:15 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-24 17:16:21 -0600
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.5ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (95.9ms)
+Completed 200 OK in 778ms (Views: 714.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/people/new" for 127.0.0.1 at 2015-10-24 17:16:29 -0600
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (18.8ms)
+  Rendered people/new.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 112ms (Views: 111.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2015-10-24 17:17:14 -0600
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oEZx/kkUoI/J25+YAL9fU8AYtrCyZI4rM0rKL5J3oeGhNqysFZma5U9Z1+uwGInDt1PfHJmNdkzFEdZdRQus/A==", "person"=>{"first_name"=>"Luis", "last_name"=>"Brenes", "email"=>"luis@example.com", "job"=>"", "bio"=>"", "gender"=>"m", "birthdate"=>"1987/05/02", "picture"=>""}, "commit"=>"Create Person"}
+  [1m[36m (2.2ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.8ms)[0m  SELECT  1 AS one FROM `people` WHERE `people`.`email` = 'luis@example.com' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`) VALUES ('Luis', 'Brenes', 'luis@example.com', '', '', 'm', '1987-05-02', '', '2015-10-24 23:17:14', '2015-10-24 23:17:14')[0m
+  [1m[35m (4.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/people/55
+Completed 302 Found in 65ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/people/55" for 127.0.0.1 at 2015-10-24 17:17:14 -0600
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"55"}
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 55 LIMIT 1[0m
+  Rendered people/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 63ms (Views: 45.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-24 17:17:16 -0600
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.8ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 77ms (Views: 75.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/resque" for 127.0.0.1 at 2015-10-24 17:17:21 -0600
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 17:17:22 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:17:22 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:17:22 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:17:22 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:17:22 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:17:22 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 17:17:23 -0600
+
+
+Started GET "/resque/queues/person_created_queue" for 127.0.0.1 at 2015-10-24 17:17:25 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:17:25 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:17:25 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:17:25 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:17:25 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:17:25 -0600
+
+
+Started GET "/resque/working" for 127.0.0.1 at 2015-10-24 17:17:34 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:17:35 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:17:35 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:17:35 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:17:35 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:17:35 -0600
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 17:17:35 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:17:36 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:17:36 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:17:36 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:17:36 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:17:36 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 17:17:36 -0600
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 53 LIMIT 1[0m
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from perform at /home/giuliani/PeopleSystem/app/workers/created_person_mailer.rb:6)
+
+PersonMailer#created_person_email: processed outbound mail in 1.0ms
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 54 LIMIT 1[0m
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from perform at /home/giuliani/PeopleSystem/app/workers/created_person_mailer.rb:6)
+
+PersonMailer#created_person_email: processed outbound mail in 0.9ms
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 53 LIMIT 1[0m
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from perform at /home/giuliani/PeopleSystem/app/workers/created_person_mailer.rb:6)
+
+PersonMailer#created_person_email: processed outbound mail in 1.4ms
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 54 LIMIT 1[0m
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from perform at /home/giuliani/PeopleSystem/app/workers/created_person_mailer.rb:6)
+
+PersonMailer#created_person_email: processed outbound mail in 0.9ms
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 53 LIMIT 1[0m
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from perform at /home/giuliani/PeopleSystem/app/workers/created_person_mailer.rb:6)
+
+PersonMailer#created_person_email: processed outbound mail in 1.0ms
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 54 LIMIT 1[0m
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from perform at /home/giuliani/PeopleSystem/app/workers/created_person_mailer.rb:6)
+
+PersonMailer#created_person_email: processed outbound mail in 1.3ms
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 55 LIMIT 1[0m
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from perform at /home/giuliani/PeopleSystem/app/workers/created_person_mailer.rb:6)
+
+PersonMailer#created_person_email: processed outbound mail in 1.0ms
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 17:18:04 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:18:04 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:18:04 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:18:04 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:18:04 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:18:04 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 17:18:04 -0600
+
+
+Started GET "/resque/failed" for 127.0.0.1 at 2015-10-24 17:18:07 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:18:07 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:18:07 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:18:07 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:18:07 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:18:07 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-24 17:19:49 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 201ms (Views: 187.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/people/new" for 127.0.0.1 at 2015-10-24 17:19:53 -0600
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (18.4ms)
+  Rendered people/new.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 55ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2015-10-24 17:20:24 -0600
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8yVy4uyxm7kCQadZYbAygBdyaFKztQD7s2uHd11lfSXyVa+wsDyh04TD7yrRF+QQYDkB/phc+JxFMJsFihlwOA==", "person"=>{"first_name"=>"Tina", "last_name"=>"Turner", "email"=>"someone@email.com", "job"=>"", "bio"=>"", "gender"=>"u", "birthdate"=>"1959/02/03", "picture"=>""}, "commit"=>"Create Person"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.2ms)[0m  SELECT  1 AS one FROM `people` WHERE `people`.`email` = 'someone@email.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`) VALUES ('Tina', 'Turner', 'someone@email.com', '', '', 'u', '1959-02-03', '', '2015-10-24 23:20:24', '2015-10-24 23:20:24')[0m
+  [1m[35m (10.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/people/56
+Completed 302 Found in 32ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/people/56" for 127.0.0.1 at 2015-10-24 17:20:24 -0600
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 56 LIMIT 1[0m
+  Rendered people/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 53ms (Views: 48.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-24 17:20:27 -0600
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (2.6ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (95.4ms)
+Completed 200 OK in 243ms (Views: 239.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/resque" for 127.0.0.1 at 2015-10-24 17:20:32 -0600
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 17:20:32 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:20:33 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:20:33 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:20:33 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:20:33 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:20:33 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 17:20:33 -0600
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 56 LIMIT 1[0m
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from perform at /home/giuliani/PeopleSystem/app/workers/created_person_mailer.rb:6)
+
+PersonMailer#created_person_email: processed outbound mail in 0.6ms
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 17:20:44 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:20:45 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:20:45 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:20:45 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:20:45 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:20:45 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 17:20:45 -0600
+
+
+Started GET "/resque/failed" for 127.0.0.1 at 2015-10-24 17:20:49 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:20:49 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:20:49 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:20:49 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:20:49 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:20:49 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-24 17:21:46 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 214ms (Views: 198.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/people/new" for 127.0.0.1 at 2015-10-24 17:21:49 -0600
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (66.6ms)
+  Rendered people/new.html.erb within layouts/application (81.3ms)
+Completed 200 OK in 208ms (Views: 205.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2015-10-24 17:22:18 -0600
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PTWdi4w+P2wKsSveK2Na6xe5HN60a2K4cIlmfzF2Hak8RUDZ0LMFBowzY62bxIx7YPJ1cp+Cmt+G0noN5goQtA==", "person"=>{"first_name"=>"Stephen", "last_name"=>"Hawking", "email"=>"stephen@example.com", "job"=>"scientist", "bio"=>"", "gender"=>"m", "birthdate"=>"1960/01/01", "picture"=>""}, "commit"=>"Create Person"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.7ms)[0m  SELECT  1 AS one FROM `people` WHERE `people`.`email` = 'stephen@example.com' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`) VALUES ('Stephen', 'Hawking', 'stephen@example.com', 'scientist', '', 'm', '1960-01-01', '', '2015-10-24 23:22:18', '2015-10-24 23:22:18')[0m
+  [1m[35m (7.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/people/57
+Completed 302 Found in 85ms (ActiveRecord: 9.3ms)
+
+
+Started GET "/people/57" for 127.0.0.1 at 2015-10-24 17:22:18 -0600
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"57"}
+  [1m[36mPerson Load (0.8ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 57 LIMIT 1[0m
+  Rendered people/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 191ms (Views: 168.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-24 17:22:21 -0600
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (2.2ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (102.4ms)
+Completed 200 OK in 289ms (Views: 284.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/resque" for 127.0.0.1 at 2015-10-24 17:22:25 -0600
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 17:22:25 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:22:26 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:22:26 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:22:26 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:22:26 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:22:26 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 17:22:26 -0600
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 57 LIMIT 1[0m
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from perform at /home/giuliani/PeopleSystem/app/workers/created_person_mailer.rb:6)
+  [1m[35mPerson Load (0.4ms)[0m  SELECT `people`.* FROM `people`
+  Rendered person_mailer/created_person_email.html.erb (3.2ms)
+
+PersonMailer#created_person_email: processed outbound mail in 18.8ms
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 17:22:40 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:22:40 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:22:40 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:22:40 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:22:40 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:22:40 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 17:22:40 -0600
+
+
+Started GET "/resque/failed" for 127.0.0.1 at 2015-10-24 17:22:44 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:22:44 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:22:44 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:22:44 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:22:44 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:22:44 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-24 17:23:40 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.5ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (96.3ms)
+Completed 200 OK in 368ms (Views: 293.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/people/new" for 127.0.0.1 at 2015-10-24 17:23:45 -0600
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (25.5ms)
+  Rendered people/new.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 85ms (Views: 83.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2015-10-24 17:24:11 -0600
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O2TKxXaw1kHWZl/hDOrbDksmZYC/SsLbu45TJSA0TxI6FBeXKj3sK1DkF5K8TQ2ePG0MLJSjOrxN1U9X90hCDw==", "person"=>{"first_name"=>"Aqua", "last_name"=>"Marina", "email"=>"aqua@example.com", "job"=>"", "bio"=>"", "gender"=>"", "birthdate"=>"1976/05/05", "picture"=>""}, "commit"=>"Create Person"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.4ms)[0m  SELECT  1 AS one FROM `people` WHERE `people`.`email` = 'aqua@example.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`) VALUES ('Aqua', 'Marina', 'aqua@example.com', '', '', '', '1976-05-05', '', '2015-10-24 23:24:11', '2015-10-24 23:24:11')[0m
+  [1m[35m (5.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/people/58
+Completed 302 Found in 28ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/people/58" for 127.0.0.1 at 2015-10-24 17:24:11 -0600
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"58"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 58 LIMIT 1[0m
+  Rendered people/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 76ms (Views: 69.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-24 17:24:16 -0600
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.6ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 75ms (Views: 73.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/resque" for 127.0.0.1 at 2015-10-24 17:24:20 -0600
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 17:24:20 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:24:20 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:24:20 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:24:20 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:24:20 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:24:20 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 17:24:20 -0600
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 58 LIMIT 1[0m
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from perform at /home/giuliani/PeopleSystem/app/workers/created_person_mailer.rb:6)
+  [1m[35mPerson Load (0.8ms)[0m  SELECT `people`.* FROM `people`
+  Rendered person_mailer/created_person_email.html.erb (3.0ms)
+
+PersonMailer#created_person_email: processed outbound mail in 15.9ms
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 17:24:48 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:24:48 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:24:48 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:24:48 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:24:48 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:24:48 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 17:24:48 -0600
+
+
+Started GET "/resque/failed" for 127.0.0.1 at 2015-10-24 17:24:51 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:24:51 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:24:51 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:24:51 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:24:51 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:24:51 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-24 17:26:30 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 323ms (Views: 301.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/people/new" for 127.0.0.1 at 2015-10-24 17:26:33 -0600
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (105.0ms)
+  Rendered people/new.html.erb within layouts/application (125.4ms)
+Completed 200 OK in 290ms (Views: 287.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2015-10-24 17:26:57 -0600
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5nrEzhNobPlbmTCBnYeyGjvl5qeoQtF1mCzANFNSjbfnChmcT+VWk90bePItIGSKTK6PC4OrKRJud9xGhC6Aqg==", "person"=>{"first_name"=>"Marie", "last_name"=>"Curie", "email"=>"marie@example.com", "job"=>"scientist", "bio"=>"", "gender"=>"f", "birthdate"=>"1923/03/03", "picture"=>""}, "commit"=>"Create Person"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.8ms)[0m  SELECT  1 AS one FROM `people` WHERE `people`.`email` = 'marie@example.com' LIMIT 1
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`) VALUES ('Marie', 'Curie', 'marie@example.com', 'scientist', '', 'f', '1923-03-03', '', '2015-10-24 23:26:57', '2015-10-24 23:26:57')[0m
+  [1m[35m (11.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/people/59
+Completed 302 Found in 116ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/people/59" for 127.0.0.1 at 2015-10-24 17:26:58 -0600
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"59"}
+  [1m[36mPerson Load (1.0ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 59 LIMIT 1[0m
+  Rendered people/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 243ms (Views: 215.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-24 17:27:00 -0600
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (1.0ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 99ms (Views: 96.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/resque" for 127.0.0.1 at 2015-10-24 17:27:04 -0600
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 17:27:04 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:27:04 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:27:04 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:27:04 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:27:04 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:27:04 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 17:27:05 -0600
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 59 LIMIT 1[0m
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from perform at /home/giuliani/PeopleSystem/app/workers/created_person_mailer.rb:6)
+  [1m[35mPerson Load (8.8ms)[0m  SELECT `people`.* FROM `people`
+  Rendered person_mailer/created_person_email.html.erb (1.6ms)
+  Rendered person_mailer/created_person_email.text.erb (0.5ms)
+  Rendered person_mailer/created_person_email.html.erb (1.2ms)
+  Rendered person_mailer/created_person_email.html.erb (0.2ms)
+  Rendered person_mailer/created_person_email.html.erb (0.2ms)
+  Rendered person_mailer/created_person_email.html.erb (0.2ms)
+  Rendered person_mailer/created_person_email.html.erb (0.2ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.2ms)
+  Rendered person_mailer/created_person_email.html.erb (0.2ms)
+  Rendered person_mailer/created_person_email.html.erb (0.2ms)
+  Rendered person_mailer/created_person_email.html.erb (0.2ms)
+  Rendered person_mailer/created_person_email.html.erb (0.2ms)
+  Rendered person_mailer/created_person_email.html.erb (0.2ms)
+  Rendered person_mailer/created_person_email.html.erb (0.2ms)
+  Rendered person_mailer/created_person_email.html.erb (0.2ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.0ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.2ms)
+  Rendered person_mailer/created_person_email.html.erb (0.2ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.2ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 17:27:16 -0600
+  Rendered person_mailer/created_person_email.html.erb (0.2ms)
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:27:16 -0600
+
+PersonMailer#created_person_email: processed outbound mail in 5205.4ms
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:27:16 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:27:16 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:27:16 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:27:16 -0600
+
+
+Started GET "/resque/working.png" for 127.0.0.1 at 2015-10-24 17:27:16 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 17:27:16 -0600
+
+Sent mail to marie@example.com (12560.2ms)
+Date: Sat, 24 Oct 2015 17:27:16 -0600
+From: perry.giu@gmail.com
+To: marie@example.com
+Message-ID: <562c13d49a0a4_39e8243e5316296a2@ace.mail>
+Subject: People App - New person added
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi Marie
+Sample mail sent using smtp.
+
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Marie Curie</h1>
+    <p>
+      Sample mail sent using smtp.
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c13cf92ada_39e8243e531629562--
+
+
+
+Started GET "/resque/failed" for 127.0.0.1 at 2015-10-24 17:37:54 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:37:55 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:37:55 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:37:55 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:37:55 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:37:55 -0600
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 17:38:18 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:38:18 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:38:18 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:38:18 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:38:18 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:38:18 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 17:38:19 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-24 17:43:28 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (37.8ms)
+Completed 200 OK in 320ms (Views: 297.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-24 17:43:29 -0600
+
+
+Started GET "/assets/scaffolds.self-159991b22a6fb169c4da39ad79759be8de309e9d2da68eedfeb40c4a118173b4.css?body=1" for 127.0.0.1 at 2015-10-24 17:43:29 -0600
+
+
+Started GET "/assets/application.self-9c3518a54225a18c466ceefabcce2b794aa6027a2b4c1afb59a76583eb29454f.css?body=1" for 127.0.0.1 at 2015-10-24 17:43:29 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-24 17:43:29 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-24 17:43:30 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-24 17:43:30 -0600
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-24 17:43:30 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-24 17:43:30 -0600
+
+
+Started GET "/people/new" for 127.0.0.1 at 2015-10-24 17:43:40 -0600
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (28.2ms)
+  Rendered people/new.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 83ms (Views: 82.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2015-10-24 17:44:24 -0600
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s0ZwJPFAAkIiiD56j6I8FD5Df091vcf+qXUfhmpQwkmyNq12rc04KKQKdgk/BeqESQgW415UP5lfLgP0vSzPVA==", "person"=>{"first_name"=>"Milu", "last_name"=>"Brenes", "email"=>"militu@example.com", "job"=>"vegetar", "bio"=>"", "gender"=>"f", "birthdate"=>"2012-04-04", "picture"=>""}, "commit"=>"Create Person"}
+  [1m[36m (2.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.3ms)[0m  SELECT  1 AS one FROM `people` WHERE `people`.`email` = 'militu@example.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`) VALUES ('Milu', 'Brenes', 'militu@example.com', 'vegetar', '', 'f', '2012-04-04', '', '2015-10-24 23:44:24', '2015-10-24 23:44:24')[0m
+  [1m[35m (8.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/people/60
+Completed 302 Found in 49ms (ActiveRecord: 11.2ms)
+
+
+Started GET "/people/60" for 127.0.0.1 at 2015-10-24 17:44:24 -0600
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 60 LIMIT 1[0m
+  Rendered people/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 73ms (Views: 57.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-24 17:44:27 -0600
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (2.7ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (94.1ms)
+Completed 200 OK in 291ms (Views: 286.3ms | ActiveRecord: 2.7ms)
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 60 LIMIT 1[0m
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from perform at /home/giuliani/PeopleSystem/app/workers/created_person_mailer.rb:6)
+  [1m[35mPerson Load (0.7ms)[0m  SELECT `people`.* FROM `people`
+  Rendered person_mailer/created_person_email.html.erb (1.1ms)
+  Rendered person_mailer/created_person_email.text.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (1.8ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (0.2ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.2ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+
+
+Started GET "/resque" for 127.0.0.1 at 2015-10-24 17:44:38 -0600
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 17:44:38 -0600
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:44:38 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:44:38 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:44:38 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:44:38 -0600
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:44:38 -0600
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+
+
+Started GET "/resque/working.png" for 127.0.0.1 at 2015-10-24 17:44:38 -0600
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 17:44:38 -0600
+  Rendered person_mailer/created_person_email.html.erb (0.2ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.4ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+
+PersonMailer#created_person_email: processed outbound mail in 5753.8ms
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 17:44:42 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:44:42 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:44:42 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:44:42 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:44:42 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:44:42 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 17:44:43 -0600
+
+
+Started GET "/resque/working.png" for 127.0.0.1 at 2015-10-24 17:44:43 -0600
+
+Sent mail to militu@example.com (3616.9ms)
+Date: Sat, 24 Oct 2015 17:44:40 -0600
+From: perry.giu@gmail.com
+To: militu@example.com
+Message-ID: <562c17e8af834_3ad123aa3316295c3@ace.mail>
+Subject: People App - New person added
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hello Angel Perry
+
+Please notice that Milu Brenes has joined the application.
+Make sure to give them a walk-through as soon as you can. Thanks,
+
+The PeopleSystem
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Germaine Villalobos</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Ariel Anderson</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jaden Torres</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Tori Masters</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jaden Perry</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Schrader</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Andrea Torres</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Anderson</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Tori Perry</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Ariel Masters</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Andrea Anderson</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Masters</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Germaine Schrader</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Tori Anderson</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Perry</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Alex Villalobos</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Starkey</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Cameron Torres</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jaden Smith</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Germaine Rodriguez</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Cameron Villalobos</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Alex Anderson</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Reese Rodriguez</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Germaine Masters</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Ariel Smith</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Tori Smith</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Cameron Perry</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Reese Smith</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Andrea Villalobos</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jaden Rodriguez</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Torres</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Angel Schrader</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jesse Rodriguez</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Andrea Perry</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Cameron Starkey</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Villalobos</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Reese Schrader</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Cameron Rodriguez</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Tori Starkey</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Cameron Masters</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Germaine Perry</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jaden Schrader</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jesse Starkey</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jaden Anderson</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jesse Perry</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Reese Anderson</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jesse Schrader</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello giuli perry</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello test usr</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello giuliani perry</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jill Rogers</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Luis Brenes</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Tina Turner</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Stephen Hawking</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Aqua Marina</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Marie Curie</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Milu Brenes</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Angel Perry</h1>
+    <p>
+      Please notice that Milu Brenes has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c17e378728_3ad123aa3316294c2--
+
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 17:45:57 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:45:57 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:45:57 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:45:57 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:45:57 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:45:57 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 17:45:58 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-24 17:49:56 -0600
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC[0m
+  Rendered people/index.html.erb within layouts/application (49.1ms)
+Completed 200 OK in 114ms (Views: 112.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/people/new" for 127.0.0.1 at 2015-10-24 17:50:01 -0600
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (5.1ms)
+  Rendered people/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2015-10-24 17:50:49 -0600
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FwEAb5VIOwkV+7Xflt3sgc2BZKcudHH7/Hha6adPuRYWcd09ycUBY5N5/awmejoRusoNCwWdiZwKI0abcDO0Cw==", "person"=>{"first_name"=>"Saul", "last_name"=>"Adams", "email"=>"saul@example.com", "job"=>"", "bio"=>"", "gender"=>"u", "birthdate"=>"1980/06/09", "picture"=>""}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'saul@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`) VALUES ('Saul', 'Adams', 'saul@example.com', '', '', 'u', '1980-06-09', '', '2015-10-24 23:50:49', '2015-10-24 23:50:49')
+  [1m[36m (14.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/people/61
+Completed 302 Found in 24ms (ActiveRecord: 15.2ms)
+
+
+Started GET "/people/61" for 127.0.0.1 at 2015-10-24 17:50:49 -0600
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"61"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  `people`.* FROM `people` WHERE `people`.`id` = 61 LIMIT 1
+  Rendered people/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.4ms)
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 61 LIMIT 1[0m
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from perform at /home/giuliani/PeopleSystem/app/workers/created_person_mailer.rb:6)
+  [1m[35mPerson Load (0.6ms)[0m  SELECT `people`.* FROM `people`
+  Rendered person_mailer/created_person_email.html.erb (1.6ms)
+  Rendered person_mailer/created_person_email.text.erb (0.5ms)
+  Rendered person_mailer/created_person_email.html.erb (1.9ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.2ms)
+  Rendered person_mailer/created_person_email.html.erb (0.2ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-24 17:50:51 -0600
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (3.1ms)[0m  [1mSELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC[0m
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered people/index.html.erb within layouts/application (81.1ms)
+Completed 200 OK in 239ms (Views: 234.0ms | ActiveRecord: 3.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (0.3ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+  Rendered person_mailer/created_person_email.html.erb (0.1ms)
+
+PersonMailer#created_person_email: processed outbound mail in 5279.5ms
+
+Sent mail to saul@example.com (3759.7ms)
+Date: Sat, 24 Oct 2015 17:50:54 -0600
+From: perry.giu@gmail.com
+To: saul@example.com
+Message-ID: <562c195ed2f4d_3b1523aa33162958f@ace.mail>
+Subject: People App - New person added
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hello Angel Perry
+
+Please notice that Saul Adams has joined the application.
+Make sure to give them a walk-through as soon as you can. Thanks,
+
+The PeopleSystem
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Germaine Villalobos</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Ariel Anderson</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jaden Torres</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Tori Masters</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jaden Perry</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Schrader</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Andrea Torres</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Anderson</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Tori Perry</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Ariel Masters</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Andrea Anderson</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Masters</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Germaine Schrader</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Tori Anderson</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Perry</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Alex Villalobos</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Starkey</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Cameron Torres</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jaden Smith</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Germaine Rodriguez</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Cameron Villalobos</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Alex Anderson</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Reese Rodriguez</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Germaine Masters</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Ariel Smith</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Tori Smith</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Cameron Perry</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Reese Smith</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Andrea Villalobos</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jaden Rodriguez</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Torres</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Angel Schrader</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jesse Rodriguez</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Andrea Perry</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Cameron Starkey</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Villalobos</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Reese Schrader</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Cameron Rodriguez</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Tori Starkey</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Cameron Masters</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Germaine Perry</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jaden Schrader</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jesse Starkey</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jaden Anderson</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jesse Perry</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Reese Anderson</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jesse Schrader</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello giuli perry</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello test usr</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello giuliani perry</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jill Rogers</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Luis Brenes</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Tina Turner</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Stephen Hawking</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Aqua Marina</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Marie Curie</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Milu Brenes</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Saul Adams</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Angel Perry</h1>
+    <p>
+      Please notice that Saul Adams has joined the application.<br/>
+      Make sure to give them a walk-through as soon as you can. Thanks,
+    </p>
+    <p>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c195a42a7a_3b1523aa3316294cf--
+
+
+
+Started GET "/resque" for 127.0.0.1 at 2015-10-24 17:51:40 -0600
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 17:51:40 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:51:41 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:51:41 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:51:41 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:51:41 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:51:41 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 17:51:41 -0600
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 17:51:44 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:51:44 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:51:44 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:51:44 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:51:44 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:51:44 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 17:51:45 -0600
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 17:51:51 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:51:51 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:51:51 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:51:51 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:51:51 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:51:51 -0600
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 17:51:55 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:51:55 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:51:55 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:51:55 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:51:55 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:51:55 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 17:51:56 -0600
+
+
+Started GET "/resque/queues/person_created_queue" for 127.0.0.1 at 2015-10-24 17:53:58 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 17:53:58 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 17:53:58 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 17:53:58 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 17:53:58 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 17:53:58 -0600
