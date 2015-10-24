@@ -2580,3 +2580,35 @@ Processing by PeopleController#show as HTML
   [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 14 LIMIT 1[0m
   Rendered people/show.html.erb within layouts/application (1.1ms)
 Completed 200 OK in 34ms (Views: 28.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-24 16:20:54 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.8ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 193ms (Views: 177.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/resque" for 127.0.0.1 at 2015-10-24 16:20:59 -0600
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 16:20:59 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 16:21:00 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 16:21:00 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 16:21:00 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 16:21:00 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 16:21:00 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 16:21:00 -0600
