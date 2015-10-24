@@ -2,6 +2,10 @@ ENV["RAILS_ENV"] = "test"
 require File.expand_path("../../config/environment", __FILE__)
 require "rails/test_help"
 require "minitest/rails"
+require 'factory_girl_rails'
+require File.dirname(FILE) + "/factories"
+
+FactoryGirl.find_definitions 
 
 # To add Capybara feature tests add `gem "minitest-rails-capybara"`
 # to the test group in the Gemfile and uncomment the following:
