@@ -1975,3 +1975,182 @@ Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde4
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-23 19:47:13 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-24 14:48:14 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (1.6ms)
+Completed 200 OK in 21ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-24 14:48:20 -0600
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.9ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 221ms (Views: 215.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/people/new" for 127.0.0.1 at 2015-10-24 14:50:39 -0600
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (20.4ms)
+  Rendered people/new.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 54ms (Views: 53.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2015-10-24 14:50:46 -0600
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SDRjv7dnzhyTM12yKRqdh40ocijH3ZVgyTFToFuF8qRJRL7t6+r0dhWxFcGZvUsX+mMbhOw0bQc/ak/SjPn/uQ==", "person"=>{"first_name"=>"", "last_name"=>"", "email"=>"giuli", "job"=>"", "bio"=>"", "gender"=>"", "birthdate"=>"", "picture"=>""}, "commit"=>"Create Person"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPerson Exists (0.3ms)[0m  SELECT  1 AS one FROM `people` WHERE `people`.`email` = 'giuli' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered people/_form.html.erb (15.2ms)
+  Rendered people/new.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 61ms (Views: 43.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2015-10-24 14:51:39 -0600
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AXI4v9L1uNKKlgN15vGuVdG/u7WJx14KLjNJfLpsrXsAAuXtjniCuAwUSwZWVnjFpvTSGaIupm3YaFUObRCgZg==", "person"=>{"first_name"=>"giuli", "last_name"=>"perry", "email"=>"giuli@example.com", "job"=>"", "bio"=>"", "gender"=>"", "birthdate"=>"1988/08/03", "picture"=>""}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'giuli@example.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered people/_form.html.erb (7.1ms)
+  Rendered people/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 70ms (Views: 63.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2015-10-24 14:53:33 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SDRjv7dnzhyTM12yKRqdh40ocijH3ZVgyTFToFuF8qRJRL7t6+r0dhWxFcGZvUsX+mMbhOw0bQc/ak/SjPn/uQ==", "person"=>{"first_name"=>"", "last_name"=>"", "email"=>"giuli", "job"=>"", "bio"=>"", "gender"=>"", "birthdate"=>"", "picture"=>""}, "commit"=>"Create Person"}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+ArgumentError (You need to supply at least one validation):
+  app/models/person.rb:12:in `<class:Person>'
+  app/models/person.rb:3:in `<top (required)>'
+  app/controllers/people_controller.rb:27:in `create'
+
+
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.3ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.7ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.8ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/giuliani/.rvm/gems/ruby-2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (43.3ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2015-10-24 14:54:28 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SDRjv7dnzhyTM12yKRqdh40ocijH3ZVgyTFToFuF8qRJRL7t6+r0dhWxFcGZvUsX+mMbhOw0bQc/ak/SjPn/uQ==", "person"=>{"first_name"=>"", "last_name"=>"", "email"=>"giuli", "job"=>"", "bio"=>"", "gender"=>"", "birthdate"=>"", "picture"=>""}, "commit"=>"Create Person"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = 'giuli' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  Rendered people/_form.html.erb (13.5ms)
+  Rendered people/new.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 222ms (Views: 164.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-24 14:54:29 -0600
+
+
+Started GET "/assets/scaffolds.self-159991b22a6fb169c4da39ad79759be8de309e9d2da68eedfeb40c4a118173b4.css?body=1" for 127.0.0.1 at 2015-10-24 14:54:29 -0600
+
+
+Started GET "/assets/application.self-9c3518a54225a18c466ceefabcce2b794aa6027a2b4c1afb59a76583eb29454f.css?body=1" for 127.0.0.1 at 2015-10-24 14:54:29 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-24 14:54:29 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-24 14:54:29 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-24 14:54:29 -0600
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-24 14:54:29 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-24 14:54:29 -0600
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-24 14:54:38 -0600
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC[0m
+  Rendered people/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 51ms (Views: 50.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/people/new" for 127.0.0.1 at 2015-10-24 14:54:42 -0600
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (3.6ms)
+  Rendered people/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 53ms (Views: 52.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2015-10-24 14:54:46 -0600
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z4Sb6EnvDrZCK25ZvhnbcnEWTGAS54FJ9GEeJkaYYURm9Ea6FWI03MSpJioOvg3iBl0lzDkOeS4COgJUkeRsWQ==", "person"=>{"first_name"=>"", "last_name"=>"", "email"=>"", "job"=>"", "bio"=>"", "gender"=>"", "birthdate"=>"", "picture"=>""}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered people/_form.html.erb (8.8ms)
+  Rendered people/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 47ms (Views: 40.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-24 14:56:18 -0600
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC[0m
+  Rendered people/index.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 80ms (Views: 73.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-24 14:56:18 -0600
+
+
+Started GET "/assets/scaffolds.self-159991b22a6fb169c4da39ad79759be8de309e9d2da68eedfeb40c4a118173b4.css?body=1" for 127.0.0.1 at 2015-10-24 14:56:18 -0600
+
+
+Started GET "/assets/application.self-9c3518a54225a18c466ceefabcce2b794aa6027a2b4c1afb59a76583eb29454f.css?body=1" for 127.0.0.1 at 2015-10-24 14:56:18 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-24 14:56:18 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-24 14:56:18 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-24 14:56:18 -0600
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-24 14:56:18 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-24 14:56:18 -0600
+
+
+Started GET "/people/new" for 127.0.0.1 at 2015-10-24 14:56:27 -0600
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (4.6ms)
+  Rendered people/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 48ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2015-10-24 14:56:30 -0600
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YYweYcllrHSl6NbwnJ47UjRQ1xPAPwkLaJyfy4DXEy9g/MMzleiWHiNqnoMsOe3CQxu+v+vW8Wyex4O5V6seMg==", "person"=>{"first_name"=>"", "last_name"=>"", "email"=>"", "job"=>"", "bio"=>"", "gender"=>"", "birthdate"=>"", "picture"=>""}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPerson Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `people` WHERE `people`.`email` = '' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered people/_form.html.erb (10.0ms)
+  Rendered people/new.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 75ms (Views: 63.6ms | ActiveRecord: 0.5ms)
