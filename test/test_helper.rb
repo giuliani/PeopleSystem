@@ -10,8 +10,17 @@ require "minitest/rails"
 # Uncomment for awesome colorful output
 # require "minitest/pride"
 
+# Minitest
+class Minitest::Unit::TestCase
+  include FactoryGirl::Syntax::Methods
+end
+
+# Minitest::Spec
+class Minitest::Spec
+  include FactoryGirl::Syntax::Methods
+end
+
+# minitest-rails
 class ActiveSupport::TestCase
-  # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
-  fixtures :all
-  # Add more helper methods to be used by all tests here...
+  include FactoryGirl::Syntax::Methods
 end
