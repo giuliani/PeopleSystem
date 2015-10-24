@@ -22,6 +22,20 @@ class Person < ActiveRecord::Base
     "#{first_name} #{last_name}"
   end
 
+  def full_gender_name
+    return "" unless !gender.nil?
+    case gender 
+      when "m"
+        return "male"
+      when "f"
+        return "female"
+      when "u"
+        return "not specified"
+      when ""
+        return "N/A"
+    end
+  end
+
   private
 
   def birthdate_after_today

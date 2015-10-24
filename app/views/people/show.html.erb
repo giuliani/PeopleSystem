@@ -27,16 +27,7 @@
 
 <p>
   <strong>Gender:</strong>
-  <% case @person.gender 
-      when "m" %>
-        male
-      <% when "f" %>
-        female
-      <% when "u" %>
-        not specified
-      <% when "" %>
-        N/A
-    <% end %>
+  <%= @person.full_gender_name %>
 </p>
 
 <p>

@@ -2540,3 +2540,43 @@ Processing by PeopleController#index as HTML
   [1m[35mPerson Load (0.2ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
   Rendered people/index.html.erb within layouts/application (12.5ms)
 Completed 200 OK in 46ms (Views: 44.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-24 15:25:59 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 186ms (Views: 172.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-24 15:25:59 -0600
+
+
+Started GET "/assets/application.self-9c3518a54225a18c466ceefabcce2b794aa6027a2b4c1afb59a76583eb29454f.css?body=1" for 127.0.0.1 at 2015-10-24 15:25:59 -0600
+
+
+Started GET "/assets/scaffolds.self-159991b22a6fb169c4da39ad79759be8de309e9d2da68eedfeb40c4a118173b4.css?body=1" for 127.0.0.1 at 2015-10-24 15:25:59 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-24 15:25:59 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-24 15:25:59 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-24 15:25:59 -0600
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-24 15:25:59 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-24 15:25:59 -0600
+
+
+Started GET "/people/14" for 127.0.0.1 at 2015-10-24 15:26:04 -0600
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 14 LIMIT 1[0m
+  Rendered people/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 34ms (Views: 28.9ms | ActiveRecord: 0.6ms)
