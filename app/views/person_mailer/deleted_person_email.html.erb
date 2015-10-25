@@ -6,8 +6,8 @@
   <body>
     <h1>Hello <%= @recipient.full_name %></h1>
     <p>
-      Please notice that <%= @person.full_name %> has joined the application.<br/>
-      Make sure to give them a walk-through as soon as you can.
+      Please notice that <%= @person['first_name'] %> <%= @person['last_name'] %> has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
     </p>
     <p>
     Regards,<br/>
