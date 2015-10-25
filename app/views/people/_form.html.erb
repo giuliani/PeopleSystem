@@ -37,7 +37,7 @@
   </div>
   <div class="field">
     <%= f.label :birthdate %><br>
-    <%= f.text_field :birthdate %>
+    <%= f.text_field :birthdate, "data-provide" => 'datepicker', "data-date-format" => "yyyy/mm/dd" %>
   </div>
   <div class="field">
     <%= f.label :picture %><br>

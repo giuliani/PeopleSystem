@@ -29,6 +29,8 @@ gem 'resque', :require => "resque/server"
 
 gem 'google-webfonts-rails', '~> 0.0.4'
 
+gem 'bootstrap-datepicker-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

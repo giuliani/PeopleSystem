@@ -13,7 +13,7 @@
 
 <br/><br/>
 
-<div class="people_content">
+<div class="people_content row">
   <% @people.each do |person| %>
     <span class="col-md-3"><%= link_to person.full_name, person %></span>
     <span class="col-md-3"><%= person.email %></span>
