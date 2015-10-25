@@ -15,8 +15,29 @@
  */
  
  body{
-  background-image: url("http://urdu-mag.com/blog/wp-content/uploads/2012/11/large/abstract+backgrounds+6.jpg");
-  background-repeat: no-repeat;
+  background-image: url("http://puribrothers2012.com/images/bgimages/001-subtle-light-pattern-background-texture-vol5.jpg");
+  background-repeat: repeat-x repeat-y;
   background-position: left top;
   font-weight: bold;
+  font-family: 'Oxygen';
+ }
+ 
+ .divider{
+  border-top: 5px solid green;
+  height: 15px;
+ }
+ 
+ .profile-pic{
+  height: 500px;
+  background-repeat: no-repeat;
+ }
+ 
+ h1{
+  font-family: 'Lobster Two';
+  font-size: 50px;
+  color: blue;
+ }
+ 
+ p{
+  font-family: 'Oxygen';
  }

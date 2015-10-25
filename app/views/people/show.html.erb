@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<h1><%= @person.full_name %></h1>
+<div class="divider"></div>
+
+<span class="col-md-3 profile-pic" style="background-image: url('<%= @person.picture %>');"></span>
+<span class="col-md-9 person-content">
 <p>
   <strong>First name:</strong>
   <%= @person.first_name %>
@@ -39,7 +44,7 @@
   <strong>Picture:</strong>
   <%= @person.picture %>
 </p>
-
+</span>
 <%= link_to 'Edit', edit_person_path(@person) %> |
 <%= link_to 'Back', people_path %> |
 <%= link_to 'Delete', @person, method: :delete, data: { confirm: 'Are you sure?' } %>
