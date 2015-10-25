@@ -18055,3 +18055,248 @@ Processing by PeopleController#index as HTML
   [1m[36mPerson Load (0.3ms)[0m  [1mSELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC[0m
   Rendered people/index.html.erb within layouts/application (27.8ms)
 Completed 200 OK in 297ms (Views: 295.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/people/32" for 127.0.0.1 at 2015-10-25 16:36:46 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[35mPerson Load (0.6ms)[0m  SELECT  `people`.* FROM `people` WHERE `people`.`id` = 32 LIMIT 1
+  Rendered people/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 1075ms (Views: 1047.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/scaffolds.self-159991b22a6fb169c4da39ad79759be8de309e9d2da68eedfeb40c4a118173b4.css?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/application.self-7017308846d0600db9aba086e22369ff3b82349550a86a588c7d199b07c4ac85.css?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/core.self-2108578dd80b06babd8fe975d4846b8ed5a95a716b5374ab5d29abb39b2a978a.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ar.self-3b6d7157be553c75fb586e9bbcb1caf9ffb68b3e52621ce7a0b4d80b3816a41e.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.az.self-8db9617a83a8a02538f8cd912021aca2670ccffafc6798d4514043d9486c5663.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.bg.self-b7a3f39633df1fa3ad6bc79721ce75dc13810b439ed1142f006e9cb827c1bb30.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.bs.self-f8df754db6d7925e6cd61086321f4f14a12c4e113496e8f585af359f3b1c9255.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ca.self-79baf1a80f07fc2992e718d2a5a176dc39d44d32863a2aad4d17b2af589b49e8.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.cs.self-1f283f86bd06ff1d1bd11164cfcd16bd1145e3124a0a01a6c94de44f5ffb6343.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.cy.self-407e2840dddaa728a6b9fcf7d486d782095e6326cc34261bca778111405cff13.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.da.self-4b8bc096136ed432878f06dbaca1882fe022584219f5550faffc1d43a7ff7c07.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.de.self-4f2c0a59189ba1be31a84960ce9d1a85891edfd548ed937f9dc3ec713da12a5f.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.el.self-3e7b5405072eed3e174dda9852237a91a9408308ba302aed7ad1babfc08edb98.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.en-GB.self-75037d96da281458d0248540731410287851ee6109628ccad4c7cef5e14f8480.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.es.self-9c8aa7d40000b61f39e9c8ec8812499042c2c3183f33fe6e42570d22603c7ba5.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.et.self-022a684302ff704bd2085ef1ac1291e6e52dacb8b27ebc687612026002440040.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.eu.self-db94d76d4f7a835b91706016eacc1002df7ccaa0648d57feae59690cee29e00c.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.fa.self-20ab53975a47e1cdba4e7a41e0f0c567a2a699d53118ccdf6ea5aae33b692d15.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.fi.self-ccf83502bdb5c6ef4444f72cdc70fe2179959ef3dff96a482337fe217bec08ba.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.fo.self-cdb4220a83b19ebd933025408642e98ff3cfc486d7aadc8c7aeb160ee5e1b623.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.fr-CH.self-8505d532c79fd48b9adfaa323009c37f260adf37c332f09bae956bdf88f897bc.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.fr.self-deb156bac5a71411c48c50300adaabc68bb75b6b65b13eaa3bcbf740f5915fa2.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.gl.self-a65b2feab5cb36718a2ddd0868d2c01bd6635cbeefcf11242a38eda9a7afd3e7.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.he.self-9d26121395049e408a1223d6eeccf625e4969a6a5d52f740af1ad533646e93a4.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.hr.self-c698e599cbb43e0d47db763bdbb56201f114793cad63d241593db5ed8cbf3e59.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.hu.self-e06f8ae64d38ddc7b6f3645693f0004fa7110a3a75747b9475cb444c7c6a7dd2.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.hy.self-80b525567470f1f84c286485bb6e7b698a80b5d22c2622ee517fc3cc15881f75.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.is.self-bc0f72036ec3567987826f039af27458caaebbf9490ab5b5b68b23ea775f164c.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.id.self-06f18dddb15d5a29cfa3ffa7d7c4a60acb44f6c4de424bb02024d09340e4441d.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.it-CH.self-e11c5acaff5fd5a2d3308fab422837e46feae15b183a39aeca25681579ebce21.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.it.self-9f3f6490c0e9e79bdd7be42d8683d4aa91b0a59a225d40cfa8d4b6402f39975c.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ja.self-788ec601281791ede95e2efa88b8b4f96c4326d6d0f4a2b71770c5bade97ad2f.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ka.self-917002de67fe7499d434606fb1b16944e08211fac649e79a7ebd6d8007e13b0f.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.kh.self-9d2694499d40685986d7db3a0fb8145a88ed95a042b4d7b86545493ce3c1201f.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.kk.self-6078cc411d054bcd7483584ac6a1fa97cff14eaa44da1a0e1b32ff3e7efbd589.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.kr.self-a64526670a47f60dc21009c7f8eaf6abedd72483359339708f5691e59094aa68.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.lt.self-bf1caffc704f0b1179d0658d35a8f9c8fbf16f17a796b0a6d758be695f8ff199.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.lv.self-d2b9bfb8a5c8d154e2bdcbd6f8b413d594667d512b1b30dee18ee193964dc3fc.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.me.self-b9bddd29292ea2f0138ea2c8d871cf2de23f1aa10093cd937b15ecc328efa040.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.mk.self-605e744c0ad4a68d96cb36c92725316514fc55d8cab9ec64cab056d5be42dbde.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ms.self-60695de2455ce924d87bad89e1d0e0297875f619b4ef0964fcf1144e153a300e.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.nb.self-b99c90e73a1aae750ca03b5d82849adfbe75ce8a6e1b49d40b6b0f9f46f471fb.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.nl-BE.self-feff7f646e3b86ba22440202914bbee45537559ba73c4189c0d64f98582a30c4.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.nl.self-621bc7370f2a617e9ce5417e2977c98ef9f716d39141e9cb690c9cf5a384d454.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.no.self-0581a112c2e1b3e84adad2e86de6dc6c68b0f2d0f224e020884c021186a64a4a.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.pl.self-5f6f3ae61020b394b9eb418adddaf8ef3c2ddd121a0faa4a11703dbada9eb82f.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.pt-BR.self-a9929788e15257cd6d53c34e940d4ccdfe5dde50d8a567f0e6d745a3b910d478.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.pt.self-50917ff15509f79150b8e907d0f0f14cf8a76ffe6cd62c1436b95fa229fba532.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ro.self-2ce2abfb1a68d74df89a67f6695c82b14cda901917dc94ed15d48ffd8098a00c.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.rs-latin.self-e380888c9b1ddf2dbbf393974ba9441e0d77c7ce1aa13575b5cb71ca1dd9aab7.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.rs.self-e4424d793f143a80597b8f9d862efdd3d5363a0bab09f5fae38a54731b7889d3.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ru.self-f150c4a51ec73942b3db65e32057ef3952acb18947952927b828a94d8f693466.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sk.self-38ed0c71883641672088263fe41929ee614f393d79c100aa1ade23a577a6eb10.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sl.self-4ebe8ef7003f2c85aef96e9bca7d07224399524dc1d50c46cbc3df555f767fd0.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sq.self-3047806efd68cc9d17af43f26f804661de0cbf16fe941e2f3fcfb17eb2681161.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sr-latin.self-df824ec3021f51baaecc100851223e1c382c9f83e954158aec74d8884619fe6b.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sr.self-20067040734b6e098a3702dbce57a79ba269202502dd7aeace4858bd1ee948d2.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sv.self-8b6c538be8b7b4f79f4f62ac4e8b3875a57f42b45bb538cf349701a6ac464a2e.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.sw.self-d38809be721122969627f871869f23011f28f1e08e13ac831a5697f99f4ec37c.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.th.self-38ccaf19cff8c13178de6efb294156266bbb5ce6652531d4b53f7f869986ce71.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:48 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.tr.self-355e071ef8544636da99b51e45ed0c1dae0fc44b0d2c10eaa0263efb2b61f865.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:49 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.ua.self-d3090a654f9c3b2ecf04746b1d8616e9fbcd4f6063435f91e76ffd00688684f4.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:49 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.uk.self-2abae8fff06c08293423a12eff4b2b27ef391b3a8732a1e728710526d42dfbac.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:49 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.vi.self-a180716cdd330a299f905be25da5533ad00d0aef3f6df53dc4432e9b668d8f2a.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:49 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.self-8ebc409538b6b966a0d74c9bb89ca62c6e27bb32f89f1f6a30a18db19e3a6b6e.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:49 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/locales/bootstrap-datepicker.zh-TW.self-7b9b920886ba93b54d1e93376737549b42b477063468d9df5fb1e30862645e6c.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:49 -0600
+
+
+Started GET "/assets/bootstrap-datepicker/index.self-75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:49 -0600
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-10-25 16:36:49 -0600
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-25 16:44:01 -0600
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.8ms)[0m  [1mSELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC[0m
+  Rendered people/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 291ms (Views: 289.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-25 16:44:01 -0600
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 287ms (Views: 286.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-fb6aa47764d9dcc89aedb9df459b5126eb846e6c70fb5614ec355bee17da4e26.css?body=1" for 127.0.0.1 at 2015-10-25 16:44:01 -0600
