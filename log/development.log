@@ -9562,3 +9562,3144 @@ Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 19:39:23 -0600
 
 
 Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 19:39:24 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-24 19:50:03 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 198ms (Views: 184.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-24 19:50:03 -0600
+
+
+Started GET "/assets/scaffolds.self-159991b22a6fb169c4da39ad79759be8de309e9d2da68eedfeb40c4a118173b4.css?body=1" for 127.0.0.1 at 2015-10-24 19:50:03 -0600
+
+
+Started GET "/assets/application.self-9c3518a54225a18c466ceefabcce2b794aa6027a2b4c1afb59a76583eb29454f.css?body=1" for 127.0.0.1 at 2015-10-24 19:50:03 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-24 19:50:03 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-24 19:50:03 -0600
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-24 19:50:03 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-24 19:50:03 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-24 19:50:03 -0600
+
+
+Started DELETE "/people/43" for 127.0.0.1 at 2015-10-24 19:50:09 -0600
+Processing by PeopleController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YUlyM91/q0xwgMafZrigUrc4PZeyO49dIPKa5kuFcpJgOa9hgfKRJvYCjuzWH3bCwHNUO5nSdzrWqYaUnPl/jw==", "id"=>"43"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 43 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `people` WHERE `people`.`id` = 43[0m
+  [1m[35m (11.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/people
+Completed 302 Found in 24ms (ActiveRecord: 12.1ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-24 19:50:09 -0600
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC[0m
+  Rendered people/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/people/41" for 127.0.0.1 at 2015-10-24 19:50:24 -0600
+Processing by PeopleController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JmeOLTQHazMmd02LaUho2iaWLPH6sA4GJmJBdlNRepknF1N/aIpRWaD1BfjZ775KUd1FXdFZ9mHQOV0EhC13hA==", "id"=>"41"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT  `people`.* FROM `people` WHERE `people`.`id` = 41 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM `people` WHERE `people`.`id` = 41
+  [1m[36m (11.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/people
+Completed 302 Found in 17ms (ActiveRecord: 12.1ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-24 19:50:25 -0600
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.5ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 65ms (Views: 63.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/resque" for 127.0.0.1 at 2015-10-24 19:50:54 -0600
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 19:50:54 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 19:50:54 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 19:50:54 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 19:50:54 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 19:50:54 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 19:50:54 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 19:50:55 -0600
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from perform at /home/giuliani/PeopleSystem/app/workers/deleted_person_mailer.rb:5)
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT `people`.* FROM `people`[0m
+  Rendered person_mailer/deleted_person_email.html.erb (1.0ms)
+  Rendered person_mailer/deleted_person_email.text.erb (0.3ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.4ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.0ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.0ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+
+PersonMailer#deleted_person_email: processed outbound mail in 1918.8ms
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 19:51:04 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 19:51:05 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 19:51:05 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 19:51:05 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 19:51:05 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 19:51:05 -0600
+
+
+Started GET "/resque/working.png" for 127.0.0.1 at 2015-10-24 19:51:05 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 19:51:05 -0600
+
+Sent mail to example@example.com (3727.4ms)
+Date: Sat, 24 Oct 2015 19:51:03 -0600
+From: perry.giu@gmail.com
+To: example@example.com
+Message-ID: <562c3587e484_ed623ae331c86318@ace.mail>
+Subject: People App - A person has been deleted
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hello Angel Perry
+
+Please notice that Cameron Masters has left the application.
+Make sure this is correct, if not, please check with an administrator.
+
+Regards,
+The PeopleSystem
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Germaine Villalobos</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Ariel Anderson</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jaden Torres</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Tori Masters</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jaden Perry</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Schrader</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Andrea Torres</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Anderson</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Tori Perry</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Ariel Masters</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Andrea Anderson</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Masters</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Germaine Schrader</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Tori Anderson</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Perry</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Alex Villalobos</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Starkey</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Cameron Torres</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jaden Smith</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Germaine Rodriguez</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Cameron Villalobos</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Alex Anderson</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Reese Rodriguez</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Germaine Masters</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Ariel Smith</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Tori Smith</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Cameron Perry</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Reese Smith</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Andrea Villalobos</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jaden Rodriguez</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Torres</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Angel Schrader</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Andrea Perry</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Cameron Starkey</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Villalobos</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Reese Schrader</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Tori Starkey</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Germaine Perry</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jaden Schrader</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jesse Starkey</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jaden Anderson</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jesse Perry</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Reese Anderson</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jesse Schrader</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello giuli perry</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello giuliani perry</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Luis Brenes</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Stephen Hawking</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Aqua Marina</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Milu Brenes</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello testing testing</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello example user</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Angel Perry</h1>
+    <p>
+      Please notice that Cameron Masters has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358545e4b_ed623ae331c8622b--
+
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from perform at /home/giuliani/PeopleSystem/app/workers/deleted_person_mailer.rb:5)
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT `people`.* FROM `people`[0m
+  Rendered person_mailer/deleted_person_email.html.erb (1.0ms)
+  Rendered person_mailer/deleted_person_email.text.erb (0.4ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.4ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.0ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.0ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.0ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+
+PersonMailer#deleted_person_email: processed outbound mail in 2095.6ms
+
+Sent mail to example@example.com (3830.8ms)
+Date: Sat, 24 Oct 2015 19:51:08 -0600
+From: perry.giu@gmail.com
+To: example@example.com
+Message-ID: <562c358cdd22d_edb23ae331c8632@ace.mail>
+Subject: People App - A person has been deleted
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hello Angel Perry
+
+Please notice that Cameron Rodriguez has left the application.
+Make sure this is correct, if not, please check with an administrator.
+
+Regards,
+The PeopleSystem
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Germaine Villalobos</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Ariel Anderson</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jaden Torres</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Tori Masters</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jaden Perry</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Schrader</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Andrea Torres</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Anderson</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Tori Perry</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Ariel Masters</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Andrea Anderson</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Masters</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Germaine Schrader</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Tori Anderson</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Perry</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Alex Villalobos</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Starkey</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Cameron Torres</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jaden Smith</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Germaine Rodriguez</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Cameron Villalobos</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Alex Anderson</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Reese Rodriguez</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Germaine Masters</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Ariel Smith</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Tori Smith</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Cameron Perry</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Reese Smith</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Andrea Villalobos</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jaden Rodriguez</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Torres</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Angel Schrader</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Andrea Perry</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Cameron Starkey</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Dani Villalobos</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Reese Schrader</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Tori Starkey</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Germaine Perry</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jaden Schrader</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jesse Starkey</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jaden Anderson</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jesse Perry</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Reese Anderson</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Jesse Schrader</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello giuli perry</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello giuliani perry</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Luis Brenes</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Stephen Hawking</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Aqua Marina</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Milu Brenes</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello testing testing</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello example user</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello Angel Perry</h1>
+    <p>
+      Please notice that Cameron Rodriguez has left the application.<br/>
+      Make sure this is correct, if not, please check with an administrator.
+    </p>
+    <p>
+    Regards,<br/>
+    The PeopleSystem
+    </p>
+  </body>
+</html>
+
+
+----==_mimepart_562c358aeaffd_edb23ae331c8622d--
+
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 19:51:27 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 19:51:27 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 19:51:27 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 19:51:27 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 19:51:27 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 19:51:27 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 19:51:27 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-24 19:51:33 -0600
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC[0m
+  Rendered people/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 64ms (Views: 63.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-24 19:55:49 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.5ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 191ms (Views: 175.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-10-24 19:55:49 -0600
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-10-24 19:55:49 -0600
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-10-24 19:55:49 -0600
+
+
+Started GET "/assets/application.self-9c3518a54225a18c466ceefabcce2b794aa6027a2b4c1afb59a76583eb29454f.css?body=1" for 127.0.0.1 at 2015-10-24 19:55:49 -0600
+
+
+Started GET "/assets/scaffolds.self-159991b22a6fb169c4da39ad79759be8de309e9d2da68eedfeb40c4a118173b4.css?body=1" for 127.0.0.1 at 2015-10-24 19:55:49 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-10-24 19:55:49 -0600
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-10-24 19:55:49 -0600
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-10-24 19:55:49 -0600
+
+
+Started DELETE "/people/1" for 127.0.0.1 at 2015-10-24 19:56:00 -0600
+Processing by PeopleController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JFCI8UX/T/+LHltqTykXPTv1P6uwLWyNeuOZSTugVCElIFWjGXJ1lQ2cExn/jsGtTL5WB5vElOqMuIU77NxZPA==", "id"=>"1"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `people` WHERE `people`.`id` = 1[0m
+  [1m[35m (5.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/people
+Completed 302 Found in 17ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-24 19:56:00 -0600
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC[0m
+  Rendered people/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 52ms (Views: 50.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/resque" for 127.0.0.1 at 2015-10-24 19:56:06 -0600
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 19:56:06 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 19:56:07 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 19:56:07 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 19:56:07 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 19:56:07 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 19:56:07 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 19:56:07 -0600
+DEPRECATION WARNING: `#deliver!` is deprecated and will be removed in Rails 5. Use `#deliver_now!` to deliver immediately or `#deliver_later!` to deliver through Active Job. (called from perform at /home/giuliani/PeopleSystem/app/workers/deleted_person_mailer.rb:5)
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT `people`.* FROM `people`[0m
+  Rendered person_mailer/deleted_person_email.html.erb (1.5ms)
+  Rendered person_mailer/deleted_person_email.text.erb (0.5ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.4ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.2ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.2ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 19:56:13 -0600
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 19:56:13 -0600
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 19:56:13 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 19:56:13 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 19:56:13 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 19:56:13 -0600
+
+
+Started GET "/resque/working.png" for 127.0.0.1 at 2015-10-24 19:56:13 -0600
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 19:56:13 -0600
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.2ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+
+PersonMailer#deleted_person_email: processed outbound mail in 2045.6ms
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 19:57:37 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 19:57:37 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 19:57:37 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 19:57:37 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 19:57:37 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 19:57:37 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 19:57:37 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-24 19:59:05 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.5ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 195ms (Views: 180.4ms | ActiveRecord: 3.2ms)
+
+
+Started DELETE "/people/17" for 127.0.0.1 at 2015-10-24 19:59:13 -0600
+Processing by PeopleController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Bsa2ArAEYLgVwwWFg3fRl3yrE3tgb/OuKDeyfGyizWsHtmtQ7Ila0pNBTfYz0AcHC+B610uGC8nebK4Ou97Adg==", "id"=>"17"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 17 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `people` WHERE `people`.`id` = 17[0m
+  [1m[35m (5.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/people
+Completed 302 Found in 17ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2015-10-24 19:59:13 -0600
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC[0m
+  Rendered people/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 46ms (Views: 45.2ms | ActiveRecord: 0.5ms)
+  [1m[36mPerson Load (1.2ms)[0m  [1mSELECT `people`.* FROM `people`[0m
+  Rendered person_mailer/deleted_person_email.html.erb (1.1ms)
+  Rendered person_mailer/deleted_person_email.text.erb (0.3ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.4ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.0ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.0ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.2ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+  Rendered person_mailer/deleted_person_email.html.erb (0.1ms)
+
+PersonMailer#deleted_person_email: processed outbound mail in 1803.4ms
+
+
+Started GET "/resque" for 127.0.0.1 at 2015-10-24 19:59:56 -0600
+
+
+Started GET "/resque/overview" for 127.0.0.1 at 2015-10-24 19:59:56 -0600
+
+
+Started GET "/resque/reset.css" for 127.0.0.1 at 2015-10-24 19:59:56 -0600
+
+
+Started GET "/resque/ranger.js" for 127.0.0.1 at 2015-10-24 19:59:56 -0600
+
+
+Started GET "/resque/jquery-1.3.2.min.js" for 127.0.0.1 at 2015-10-24 19:59:56 -0600
+
+
+Started GET "/resque/jquery.relatize_date.js" for 127.0.0.1 at 2015-10-24 19:59:56 -0600
+
+
+Started GET "/resque/style.css" for 127.0.0.1 at 2015-10-24 19:59:56 -0600
+
+
+Started GET "/resque/poll.png" for 127.0.0.1 at 2015-10-24 19:59:56 -0600

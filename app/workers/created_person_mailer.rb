@@ -3,6 +3,6 @@ class CreatedPersonMailer
 
   def self.perform person_id
     person = Person.find(person_id)
-    PersonMailer.created_person_email(person).deliver
+    PersonMailer.created_person_email(person).deliver_now!
   end
 end
