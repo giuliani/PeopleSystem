@@ -57,6 +57,11 @@ GEM
       railties (~> 4.0)
     erubis (2.7.0)
     execjs (2.6.0)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.5.0)
+      factory_girl (~> 4.5.0)
+      railties (>= 3.0.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     google-webfonts-rails (0.0.4)
@@ -77,6 +82,9 @@ GEM
     mime-types (2.6.2)
     mini_portile (0.6.2)
     minitest (5.8.1)
+    minitest-rails (2.2.0)
+      minitest (~> 5.7)
+      railties (~> 4.1)
     mono_logger (1.1.0)
     multi_json (1.11.2)
     mysql2 (0.3.20)
@@ -169,9 +177,11 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   dotenv-rails
+  factory_girl_rails
   google-webfonts-rails (~> 0.0.4)
   jbuilder (~> 2.0)
   jquery-rails
+  minitest-rails
   mysql2 (~> 0.3.18)
   rails (= 4.2.4)
   resque
