@@ -33,7 +33,7 @@
   </div>
   <div class="field">
     <%= f.label :gender %><br>
-    <%= f.select :gender, options_for_select({ "N/A" => "", "Male" => "m", "Female" => "f", "Not Specified" => "u" })%>
+    <%= f.select :gender, options_for_select( [["N/A", ""], ["male", "m"], ["female", "f"], ["not specified", "u" ]], @person.gender ) %>
   </div>
   <div class="field">
     <%= f.label :birthdate %><br>

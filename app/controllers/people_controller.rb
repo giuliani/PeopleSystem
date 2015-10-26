@@ -1,17 +1,32 @@
+##
 require 'rake'
 require 'resque/tasks'
 
 class PeopleController < ApplicationController
   before_action :set_person, only: [:show, :edit, :update, :destroy]
 
-  # GET /people
-  # GET /people.json
+  # Public: Retrieves a full list of all people in the system.
+  #
+  # Examples
+  #
+  #   GET /people.json
+  #   # => { status: 200, people: [{ id: 1, full_name: 'John Smith', age: 84, url: '/people/1.json' }] }
+  #
+  # Returns the full list of people in the system
   def index
     @people = Person.all.order(:first_name, :last_name)
   end
 
-  # GET /people/1
-  # GET /people/1.json
+  # Public: Retrieves all attributes of the specified person.
+  #
+  # id - the person's id.
+  #
+  # Examples
+  #
+  #   GET /people/1.json
+  #   # => { status: 200, person: { id: 1, first_name: 'John', last_name: 'Smith', email: 'john.smith@example.com', job: 'taxi driver', bio: 'My Bio.', gender: 'm', birthdate: '1980/02/08', picture: 'http://images.com/1.jpg', created_at: '2015-01-01 13:51:03', updated_at: '2015-01-01 13:51:03' } }
+  #
+  # Returns all attributes for the person
   def show
   end
 
@@ -26,8 +41,19 @@ class PeopleController < ApplicationController
   def edit
   end
 
-  # POST /people
-  # POST /people.json
+  # Public: Creates a new person with the attributes provided.
+  #
+  # person - A hash containing all the attributes to create the new person.
+  #
+  # Examples
+  #
+  #   POST /people.json correct_person_hash
+  #   # => { status: 201, person_object }
+  #
+  #   POST /people.json incorrect_person_hash
+  #   # => { status: 422, errors: {'email': ['Email is invalid']} }
+  #
+  # Returns redirect to person url or displays errors upon attempting creation.
   def create
     @person = Person.new(person_params)
 
@@ -46,8 +72,19 @@ class PeopleController < ApplicationController
     end
   end
 
-  # PATCH/PUT /people/1
-  # PATCH/PUT /people/1.json
+  # Public: Updates a person with the attributes provided.
+  #
+  # person - A hash containing all the attributes to update the specified person.
+  #
+  # Examples
+  #
+  #   PUT /people.json correct_person_hash
+  #   # => { status: 200, person_object }
+  #
+  #   PUT /people.json incorrect_person_hash
+  #   # => { status: 422, errors: {'email': ['Email is invalid']} }
+  #
+  # Returns redirect to person url or displays errors upon attempting the update.
   def update
     respond_to do |format|
       if @person.update(person_params)
@@ -60,8 +97,16 @@ class PeopleController < ApplicationController
     end
   end
 
-  # DELETE /people/1
-  # DELETE /people/1.json
+  # Public: Deletes the person with the specified id.
+  #
+  # id - the person's id.
+  #
+  # Examples
+  #
+  #   DELETE /people/1.json
+  #   # => { status: 200, message: 'Person was successfully destroyed.' }
+  #
+  # Returns redirect to people url with the message.
   def destroy
     Person.where.not(id: @person.id).each do | recipient |
       queue_hash = { :person => @person, :recipient_id => recipient.id }
