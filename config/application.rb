@@ -22,6 +22,6 @@ module PeopleSystem
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
-    config.from_email = "perry.giu@gmail.com"
+    config.from_email = ENV['GMAIL_USER']
   end
 end
