@@ -31,3 +31,7 @@ end
 class ActiveSupport::TestCase
   include FactoryGirl::Syntax::Methods
 end
+
+(ActiveRecord::Base.connection.tables - %w{schema_migrations}).each do |table_name|
+  ActiveRecord::Base.connection.execute "TRUNCATE TABLE #{table_name};"
+end
