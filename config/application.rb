@@ -25,6 +25,6 @@ module PeopleSystem
     config.generators do |g|
       g.test_framework :mini_test
     end
-    config.from_email = "perry.giu@gmail.com"
+    config.from_email = ENV['GMAIL_USER']
   end
 end
