@@ -1,10 +1,18 @@
 == PeopleSystem
 
-The People System App is a web application designed to manage people.  It uses the Rails MVC framework and
-architecture.  The index page shows the list of people in the system with information such as: full name, 
-email, age and a delete link to delete the person from the system.  Towards the end of the page you can find 
-a link to create a new person.  This will display a page with a blank form to fill in all the fields for that
-user. Validations are in place to check that first name, last name, email and birthdate are present. It also checks the email format, the picture uri format if present and if the birthdate is in the past.  From the list you can also click on the person's full name; this will take you to their profile page.  Here you'll find links to Edit, Delete and go back to the list of people.  The edit page has pre populated data from the person and validates the fields again to update properly.  You can cancel the process and go back to either the profile page or the list.  Finally, the application also sends out an email to all users in the system when a user is created or deleted.  The sending of the emails is only triggered when you click the link to create a new person in the List page, after that, all emails in queues will be sent inmediately without interfering with the application's performance.
+The People System App is a web application designed to manage people.  
+
+It uses the Rails MVC framework and architecture.  The index page shows the list of people in the system with information such as: full name, email, age and a delete link to delete the person from the system.  
+
+Towards the end of the page you can find a link to create a new person.  This will display a page with a blank form to fill in all the fields for that user. 
+
+Validations are in place to check that first name, last name, email and birthdate are present. It also checks the email format, the picture uri format if present and if the birthdate is in the past.  
+
+From the list you can also click on the person's full name; this will take you to their profile page.  Here you'll find links to Edit, Delete and go back to the list of people.  
+
+The edit page has pre populated data from the person and validates the fields again to update properly.  You can cancel the process and go back to either the profile page or the list.  
+
+Finally, the application also sends out an email to all users in the system when a user is created or deleted.  The sending of the emails is only triggered when you click the link to create a new person in the List page, after that, all emails in queues will be sent inmediately without interfering with the application's performance.
 
 
 * === 　Ruby version 2.2, Rails version 4.2
