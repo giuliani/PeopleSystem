@@ -121,13 +121,25 @@
 
         <div class="method-description">
           
-          
+          <p>Internal: Sets the created person email.</p>
+
+<p>recipient - the <a href="Person.html">Person</a> object that will receive
+the email person - the <a href="Person.html">Person</a> object that is the
+subject of creation.</p>
+
+<p>Examples</p>
+
+<pre class="ruby"><span class="ruby-constant">PersonMailer</span>.<span class="ruby-identifier">created_person_email</span>(<span class="ruby-identifier">recipient</span>, <span class="ruby-identifier">person</span>).<span class="ruby-identifier">deliver</span>
+<span class="ruby-comment"># =&gt; the email in app/views/person_mailer/created_person_email.html.erb</span>
+</pre>
+
+<p>Returns nothing. Sends out the email</p>
           
           
 
           
           <div class="method-source-code" id="created_person_email-source">
-            <pre><span class="ruby-comment"># File app/mailers/person_mailer.rb, line 4</span>
+            <pre><span class="ruby-comment"># File app/mailers/person_mailer.rb, line 15</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">created_person_email</span>(<span class="ruby-identifier">recipient</span>, <span class="ruby-identifier">person</span>)
   <span class="ruby-ivar">@person</span> = <span class="ruby-identifier">person</span>
   <span class="ruby-ivar">@recipient</span> = <span class="ruby-identifier">recipient</span>
@@ -156,13 +168,25 @@
 
         <div class="method-description">
           
-          
+          <p>Internal: Sets the deleted person email.</p>
+
+<p>recipient - the <a href="Person.html">Person</a> object that will receive
+the email person - the person hash containing the person info that is the
+subject of deletion.</p>
+
+<p>Examples</p>
+
+<pre class="ruby"><span class="ruby-constant">PersonMailer</span>.<span class="ruby-identifier">created_person_email</span>(<span class="ruby-identifier">recipient</span>, <span class="ruby-identifier">person</span>).<span class="ruby-identifier">deliver</span>
+<span class="ruby-comment"># =&gt; the email in app/views/person_mailer/deleted_person_email.html.erb</span>
+</pre>
+
+<p>Returns nothing. Sends out the email</p>
           
           
 
           
           <div class="method-source-code" id="deleted_person_email-source">
-            <pre><span class="ruby-comment"># File app/mailers/person_mailer.rb, line 10</span>
+            <pre><span class="ruby-comment"># File app/mailers/person_mailer.rb, line 32</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">deleted_person_email</span>(<span class="ruby-identifier">recipient</span>, <span class="ruby-identifier">person</span>)
   <span class="ruby-ivar">@person</span> = <span class="ruby-identifier">person</span>
   <span class="ruby-ivar">@recipient</span> = <span class="ruby-identifier">recipient</span>

@@ -119,13 +119,27 @@
 
         <div class="method-description">
           
-          
+          <p>Internal: The worker&#39;s actions to perform. When the job executes, it
+calls the <a href="PersonMailer.html">PersonMailer</a></p>
+
+<pre>function to send out the corresponding email.</pre>
+
+<p>queue_hash - the hash containing the created person&#39;s information hash
+and the recipient_id</p>
+
+<p>Examples</p>
+
+<pre class="ruby"><span class="ruby-constant">DeletedPersonMailer</span>.<span class="ruby-identifier">perform</span>
+</pre>
+
+<p>Returns nothing. Calls the <a href="PersonMailer.html">PersonMailer</a> to
+send out emails.</p>
           
           
 
           
           <div class="method-source-code" id="perform-source">
-            <pre><span class="ruby-comment"># File app/workers/deleted_person_mailer.rb, line 4</span>
+            <pre><span class="ruby-comment"># File app/workers/deleted_person_mailer.rb, line 14</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">perform</span> <span class="ruby-identifier">queue_hash</span>
   <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Preparing to send Person Deleted Email.&quot;</span>
   <span class="ruby-identifier">recipient</span> = <span class="ruby-constant">Person</span>.<span class="ruby-identifier">find</span> <span class="ruby-identifier">queue_hash</span>[<span class="ruby-string">&#39;recipient_id&#39;</span>]
