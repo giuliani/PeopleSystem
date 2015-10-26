@@ -82,6 +82,9 @@ GEM
     mime-types (2.6.2)
     mini_portile (0.6.2)
     minitest (5.8.1)
+    minitest-rails (2.2.0)
+      minitest (~> 5.7)
+      railties (~> 4.1)
     mono_logger (1.1.0)
     multi_json (1.11.2)
     mysql2 (0.3.20)
@@ -178,6 +181,7 @@ DEPENDENCIES
   google-webfonts-rails (~> 0.0.4)
   jbuilder (~> 2.0)
   jquery-rails
+  minitest-rails (~> 2.2)
   mysql2 (~> 0.3.18)
   rails (= 4.2.4)
   resque
