@@ -1,4 +1,5 @@
 require 'rake'
+require 'resque/tasks'
 
 class PeopleController < ApplicationController
   before_action :set_person, only: [:show, :edit, :update, :destroy]
@@ -17,6 +18,8 @@ class PeopleController < ApplicationController
   # GET /people/new
   def new
     @person = Person.new
+    ENV['QUEUES'] = '*'
+    render :new and Thread.new { Rake::Task["resque:work"].invoke }
   end
 
   # GET /people/1/edit
