@@ -1,21 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  first_name: MyString
-  last_name: MyString
-  email: MyString
-  job: MyString
-  bio: MyText
-  gender: MyString
-  birthdate: 
-  picture: MyString
+  first_name: Stephen
+  last_name: Hawking
+  email: stephen.hawking@example.com
+  job: Brilliant Mind
+  bio: In one word, inspirational
+  gender: m
+  birthdate: 1965/12/12 
+  picture: http://images.com/1.png
 
 two:
-  first_name: MyString
-  last_name: MyString
-  email: MyString
-  job: MyString
-  bio: MyText
-  gender: MyString
-  birthdate: 
-  picture: MyString
+  first_name: Marie
+  last_name: Curie
+  email: marie.curie@example.com
+  job: Another brilliant scientist
+  bio: Science is my life
+  gender: f
+  birthdate: 1920/3/3 
+  picture: http://images.com/2.jpg

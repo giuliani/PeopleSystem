@@ -22800,3 +22800,160 @@ Content-Transfer-Encoding: 7bit
 
 ----==_mimepart_562d73f5cdbe4_16a223ddb31c434f4--
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+DEPRECATION WARNING: You did not specify a value for the configuration option `active_support.test_order`. In Rails 5, the default value of this option will change from `:sorted` to `:random`.
+To disable this warning and keep the current behavior, you can add the following line to your `config/environments/test.rb`:
+
+  Rails.application.configure do
+    config.active_support.test_order = :sorted
+  end
+
+Alternatively, you can opt into the future behavior by setting this option to `:random`. (called from test_order at /home/giuliani/.rvm/gems/ruby-2.2.0/gems/activesupport-4.2.4/lib/active_support/test_case.rb:42)
+  [1m[35m (0.8ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `people`[0m
+  [1m[35mFixture Insert (1.5ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', 'MyString', NULL, 'MyString', '2015-10-26 02:56:06', '2015-10-26 02:56:06', 980190962)
+Mysql2::Error: Data too long for column 'gender' at row 1: INSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', 'MyString', NULL, 'MyString', '2015-10-26 02:56:06', '2015-10-26 02:56:06', 980190962)
+  [1m[36m (7.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.4ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM `people`
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', 'MyString', NULL, 'MyString', '2015-10-26 02:56:06', '2015-10-26 02:56:06', 980190962)[0m
+Mysql2::Error: Data too long for column 'gender' at row 1: INSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', 'MyString', NULL, 'MyString', '2015-10-26 02:56:06', '2015-10-26 02:56:06', 980190962)
+  [1m[35m (6.4ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.1ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM `people`[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', 'MyString', NULL, 'MyString', '2015-10-26 02:56:06', '2015-10-26 02:56:06', 980190962)
+Mysql2::Error: Data too long for column 'gender' at row 1: INSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', 'MyString', NULL, 'MyString', '2015-10-26 02:56:06', '2015-10-26 02:56:06', 980190962)
+  [1m[36m (5.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM `people`
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', 'MyString', NULL, 'MyString', '2015-10-26 02:56:06', '2015-10-26 02:56:06', 980190962)[0m
+Mysql2::Error: Data too long for column 'gender' at row 1: INSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', 'MyString', NULL, 'MyString', '2015-10-26 02:56:06', '2015-10-26 02:56:06', 980190962)
+  [1m[35m (5.0ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `people`[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', 'MyString', NULL, 'MyString', '2015-10-26 02:56:06', '2015-10-26 02:56:06', 980190962)
+Mysql2::Error: Data too long for column 'gender' at row 1: INSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', 'MyString', NULL, 'MyString', '2015-10-26 02:56:06', '2015-10-26 02:56:06', 980190962)
+  [1m[36m (6.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.2ms)[0m  SET FOREIGN_KEY_CHECKS = 0
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM `people`
+  [1m[36mFixture Insert (0.9ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', 'MyString', NULL, 'MyString', '2015-10-26 02:56:06', '2015-10-26 02:56:06', 980190962)[0m
+Mysql2::Error: Data too long for column 'gender' at row 1: INSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', 'MyString', NULL, 'MyString', '2015-10-26 02:56:06', '2015-10-26 02:56:06', 980190962)
+  [1m[35m (6.3ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM `people`[0m
+  [1m[35mFixture Insert (0.9ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', 'MyString', NULL, 'MyString', '2015-10-26 02:56:06', '2015-10-26 02:56:06', 980190962)
+Mysql2::Error: Data too long for column 'gender' at row 1: INSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`, `id`) VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyText', 'MyString', NULL, 'MyString', '2015-10-26 02:56:06', '2015-10-26 02:56:06', 980190962)
+  [1m[36m (4.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  SET FOREIGN_KEY_CHECKS = 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+DEPRECATION WARNING: You did not specify a value for the configuration option `active_support.test_order`. In Rails 5, the default value of this option will change from `:sorted` to `:random`.
+To disable this warning and keep the current behavior, you can add the following line to your `config/environments/test.rb`:
+
+  Rails.application.configure do
+    config.active_support.test_order = :sorted
+  end
+
+Alternatively, you can opt into the future behavior by setting this option to `:random`. (called from test_order at /home/giuliani/.rvm/gems/ruby-2.2.0/gems/activesupport-4.2.4/lib/active_support/test_case.rb:42)
+  [1m[35m (0.3ms)[0m  SELECT @@FOREIGN_KEY_CHECKS
+  [1m[36m (0.2ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM `people`[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`, `id`) VALUES ('Stephen', 'Hawking', 'stephen.hawking@example.com', 'Brilliant Mind', 'In one word, inspirational', 'm', '1965/12/12', 'http://images.com/1.png', '2015-10-26 02:57:31', '2015-10-26 02:57:31', 980190962)
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO `people` (`first_name`, `last_name`, `email`, `job`, `bio`, `gender`, `birthdate`, `picture`, `created_at`, `updated_at`, `id`) VALUES ('Marie', 'Curie', 'marie.curie@example.com', 'Another brilliant scientist', 'Science is my life', 'f', '1920/3/3', 'http://images.com/2.jpg', '2015-10-26 02:57:31', '2015-10-26 02:57:31', 298486374)[0m
+  [1m[35m (3.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+-----------------------------------------------
+PeopleControllerTest: test_should_create_person
+-----------------------------------------------
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 980190962 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `people`
+Processing by PeopleController#create as HTML
+  Parameters: {"person"=>{"bio"=>"In one word, inspirational", "birthdate"=>"1965-12-12", "email"=>"stephen.hawking@example.com", "first_name"=>"Stephen", "gender"=>"m", "job"=>"Brilliant Mind", "last_name"=>"Hawking", "picture"=>"http://images.com/1.png"}}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+PeopleControllerTest: test_should_destroy_person
+------------------------------------------------
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 980190962 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `people`
+Processing by PeopleController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------
+PeopleControllerTest: test_should_get_edit
+------------------------------------------
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 980190962 LIMIT 1[0m
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  `people`.* FROM `people` WHERE `people`.`id` = 980190962 LIMIT 1
+  Rendered people/_form.html.erb (15.6ms)
+  Rendered people/edit.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 455ms (Views: 453.0ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------------
+PeopleControllerTest: test_should_get_index
+-------------------------------------------
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 980190962 LIMIT 1[0m
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT `people`.* FROM `people`  ORDER BY `people`.`first_name` ASC, `people`.`last_name` ASC
+  Rendered people/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 263ms (Views: 263.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------
+PeopleControllerTest: test_should_get_new
+-----------------------------------------
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 980190962 LIMIT 1[0m
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (3.3ms)
+  Rendered people/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 260ms (Views: 259.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+---------------------------------------------
+PeopleControllerTest: test_should_show_person
+---------------------------------------------
+  [1m[35mPerson Load (0.6ms)[0m  SELECT  `people`.* FROM `people` WHERE `people`.`id` = 980190962 LIMIT 1
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT  `people`.* FROM `people` WHERE `people`.`id` = 980190962 LIMIT 1[0m
+  Rendered people/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 266ms (Views: 265.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------------
+PeopleControllerTest: test_should_update_person
+-----------------------------------------------
+  [1m[35mPerson Load (0.1ms)[0m  SELECT  `people`.* FROM `people` WHERE `people`.`id` = 980190962 LIMIT 1
+Processing by PeopleController#update as HTML
+  Parameters: {"person"=>{"bio"=>"In one word, inspirational", "birthdate"=>"1965-12-12", "email"=>"stephen.hawking@example.com", "first_name"=>"Stephen", "gender"=>"m", "job"=>"Brilliant Mind", "last_name"=>"Hawking", "picture"=>"http://images.com/1.png"}, "id"=>"980190962"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
