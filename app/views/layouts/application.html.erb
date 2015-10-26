@@ -2,16 +2,62 @@
 <html>
 <head>
   <title>PeopleSystem</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" %>
   <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" %>
   <%= csrf_meta_tags %>
-</head>
-<body>
 
-<%= yield %>
+  <%= google_webfonts_init({
+    google: ['Lobster Two', 'Oxygen']
+  }) %>
+</head>
+
+<body>
+  <div id="header-wrapper">
+		<div id="header" class="container">
+			<div id="logo">
+				<h1><a href="#">People System</a></h1>
+			</div>
+			<div id="banner"> </div>
+		</div>
+	</div>
+
+  <div class="container">
+    <%= yield %>
+  </div>
+  
+  <div id="footer-wrapper">
+	  <div id="footer" class="container">
+		  <div id="box1">
+			  <div class="title">
+				  <h2>Latest Posts</h2>
+			  </div>
+			  <ul class="style1">
+				  <li><a href="#">Semper mod quis eget mi dolore</a></li>
+				  <li><a href="#">Quam turpis feugiat sit dolor</a></li>
+				  <li><a href="#">Amet ornare in hendrerit in lectus</a></li>
+				  <li><a href="#">Consequat etiam lorem phasellus</a></li>
+				  <li><a href="#">Amet turpis, feugiat et sit amet</a></li>
+				  <li><a href="#">Semper mod quisturpis nisi</a></li>
+			  </ul>
+		  </div>
+		  <div id="box2">
+			  <div class="title">
+				  <h2>Popular Links</h2>
+			  </div>
+			  <ul class="style1">
+				  <li><a href="#">Semper mod quis eget mi dolore</a></li>
+				  <li><a href="#">Quam turpis feugiat sit dolor</a></li>
+				  <li><a href="#">Amet ornare in hendrerit in lectus</a></li>
+				  <li><a href="#">Consequat etiam lorem phasellus</a></li>
+				  <li><a href="#">Amet turpis, feugiat et sit amet</a></li>
+				  <li><a href="#">Semper mod quisturpis nisi</a></li>
+			  </ul>
+		  </div>
+	  </div>
+  </div>
 
 </body>
 </html>

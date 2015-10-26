@@ -1,3 +1,6 @@
+require 'rake'
+require 'resque/tasks'
+
 class PeopleController < ApplicationController
   before_action :set_person, only: [:show, :edit, :update, :destroy]
 
@@ -15,6 +18,8 @@ class PeopleController < ApplicationController
   # GET /people/new
   def new
     @person = Person.new
+    ENV['QUEUES'] = '*'
+    render :new and Thread.new { Rake::Task["resque:work"].invoke }
   end
 
   # GET /people/1/edit
@@ -28,6 +33,10 @@ class PeopleController < ApplicationController
 
     respond_to do |format|
       if @person.save
+        Person.all.each do | recipient |
+          queue_hash = { :person_id => @person.id, :recipient_id => recipient.id }
+          Resque.enqueue CreatedPersonMailer, queue_hash
+        end
         format.html { redirect_to @person, notice: 'Person was successfully created.' }
         format.json { render :show, status: :created, location: @person }
       else
@@ -54,6 +63,10 @@ class PeopleController < ApplicationController
   # DELETE /people/1
   # DELETE /people/1.json
   def destroy
+    Person.where.not(id: @person.id).each do | recipient |
+      queue_hash = { :person => @person, :recipient_id => recipient.id }
+      Resque.enqueue DeletedPersonMailer, queue_hash
+    end
     @person.destroy
     respond_to do |format|
       format.html { redirect_to people_url, notice: 'Person was successfully destroyed.' }

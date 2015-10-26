@@ -2,6 +2,8 @@
 
 <h1>Listing People</h1>
 
+<div class="divider"></div>
+
 <div class="titles">
   <span class="col-md-3">Full Name</span>
   <span class="col-md-3">Email</span>
@@ -11,7 +13,7 @@
 
 <br/><br/>
 
-<div class="people_content">
+<div class="people_content row">
   <% @people.each do |person| %>
     <span class="col-md-3"><%= link_to person.full_name, person %></span>
     <span class="col-md-3"><%= person.email %></span>

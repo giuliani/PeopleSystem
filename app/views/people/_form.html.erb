@@ -33,11 +33,11 @@
   </div>
   <div class="field">
     <%= f.label :gender %><br>
-    <%= f.text_field :gender %>
+    <%= f.select :gender, options_for_select({ "N/A" => "", "Male" => "m", "Female" => "f", "Not Specified" => "u" })%>
   </div>
   <div class="field">
     <%= f.label :birthdate %><br>
-    <%= f.text_field :birthdate %>
+    <%= f.text_field :birthdate, "data-provide" => 'datepicker', "data-date-format" => "yyyy/mm/dd" %>
   </div>
   <div class="field">
     <%= f.label :picture %><br>

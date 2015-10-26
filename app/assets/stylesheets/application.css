@@ -15,8 +15,93 @@
  */
  
  body{
-  background-image: url("http://urdu-mag.com/blog/wp-content/uploads/2012/11/large/abstract+backgrounds+6.jpg");
-  background-repeat: no-repeat;
+  background-image: url("http://puribrothers2012.com/images/bgimages/001-subtle-light-pattern-background-texture-vol5.jpg");
+  background-repeat: repeat-x repeat-y;
   background-position: left top;
   font-weight: bold;
+  font-family: 'Oxygen';
  }
+ 
+ .divider{
+  border-top: 5px solid green;
+  height: 15px;
+ }
+ 
+ .profile-pic{
+  height: 500px;
+  background-repeat: no-repeat;
+ }
+ 
+ h1{
+  font-family: 'Lobster Two';
+  font-size: 50px;
+  color: blue;
+ }
+ 
+ p{
+  font-family: 'Oxygen';
+ }
+ 
+#header-wrapper{
+  height: 90px;
+ background: gray url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/World_Map_FIBA.svg/1024px-World_Map_FIBA.svg.png') no-repeat; 
+}
+
+#footer-wrapper{
+	background: #0F0F0F;
+}
+
+.container {
+	margin: 0px auto;
+}
+
+#footer-wrapper
+{
+	overflow: hidden;
+	padding: 5em 0em;
+	background: #1E1B1A;
+}
+
+#footer
+{
+	color: #ADADAD;
+}
+
+#footer .title h2
+{
+	font-weight: 400;
+	font-size: 1.2em;
+	color: #FFF;
+}
+
+#footer .title
+{
+	border-color: #2D2926 !important;
+}
+
+#footer .style1 li
+{
+	border-color: #2D2926 !important;
+}
+
+#footer .style1 a
+{
+	letter-spacing: 0.10em;
+	font-size:1em;
+	color: #B1B1B1;
+}
+
+#box1
+{
+	float: left;
+	width: 354px;
+	margin-right: 24px;
+	padding-right: 30px;
+}
+
+#box2
+{
+	float: right;
+	width: 344px;
+	padding-left: 40px;
+}
