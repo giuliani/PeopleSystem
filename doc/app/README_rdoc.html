@@ -51,6 +51,22 @@
   </div>
 
   
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="#label-PeopleSystem">PeopleSystem</a>
+    <li><a href="#label-E3-80-80Ruby+version+2.2-2C+Rails+version+4.2">　Ruby version 2.2, Rails version 4.2</a>
+    <li><a href="#label-E3-80-80System+dependencies">　System dependencies</a>
+    <li><a href="#label-E3-80-80Database+creation">　Database creation</a>
+    <li><a href="#label-E3-80-80Environment+variables">　Environment variables</a>
+    <li><a href="#label-E3-80-80Database+initialization">　Database initialization</a>
+    <li><a href="#label-E3-80-80Run+the+test+suite">　Run the test suite</a>
+    <li><a href="#label-E3-80-80Services+">　Services </a>
+    <li><a href="#label-E3-80-80Delivery+Date">　Delivery Date</a>
+  </ul>
+</div>
+
 
   <div id="project-metadata">
     <div id="fileindex-section" class="nav-section">
@@ -68,34 +84,90 @@
 
 <main role="main" aria-label="Page README.rdoc">
 
-<h2 id="label-README"><a href="README_rdoc.html">README</a><span><a href="#label-README">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<h2 id="label-PeopleSystem">PeopleSystem<span><a href="#label-PeopleSystem">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
-<p>This <a href="README_rdoc.html">README</a> would normally document whatever
-steps are necessary to get the application up and running.</p>
-
-<p>Things you may want to cover:</p>
+<p>The People System App is a web application designed to manage people.  It
+uses the Rails MVC framework and architecture.  The index page shows the
+list of people in the system with information such as: full name,  email,
+age and a delete link to delete the person from the system.  Towards the
+end of the page you can find  a link to create a new person.  This will
+display a page with a blank form to fill in all the fields for that user.
+Validations are in place to check that first name, last name, email and
+birthdate are present. It also checks the email format, the picture uri
+format if present and if the birthdate is in the past.  From the list you
+can also click on the person&#39;s full name; this will take you to their
+profile page.  Here you&#39;ll find links to Edit, Delete and go back to
+the list of people.  The edit page has pre populated data from the person
+and validates the fields again to update properly.  You can cancel the
+process and go back to either the profile page or the list.  Finally, the
+application also sends out an email to all users in the system when a user
+is created or deleted.  The sending of the emails is only triggered when
+you click the link to create a new person in the List page, after that, all
+emails in queues will be sent inmediately without interfering with the
+application&#39;s performance.</p>
 <ul><li>
-<p>Ruby version</p>
+<h3 id="label-E3-80-80Ruby+version+2.2-2C+Rails+version+4.2">　Ruby version 2.2, Rails version 4.2<span><a href="#label-E3-80-80Ruby+version+2.2-2C+Rails+version+4.2">&para;</a> <a href="#top">&uarr;</a></span></h3>
 </li><li>
-<p>System dependencies</p>
-</li><li>
-<p>Configuration</p>
-</li><li>
-<p>Database creation</p>
-</li><li>
-<p>Database initialization</p>
-</li><li>
-<p>How to run the test suite</p>
-</li><li>
-<p>Services (job queues, cache servers, search engines, etc.)</p>
-</li><li>
-<p>Deployment instructions</p>
-</li><li>
-<p>…</p>
-</li></ul>
+<h3 id="label-E3-80-80System+dependencies">　System dependencies<span><a href="#label-E3-80-80System+dependencies">&para;</a> <a href="#top">&uarr;</a></span></h3>
 
-<p>Please feel free to use a different markup language if you do not plan to
-run <code>rake doc:app</code>.</p>
+<p>To install MySQL as the database follow the steps in Database Creation</p>
+
+<p>To install Redis follow the steps in this page</p>
+
+<pre>https://www.digitalocean.com/community/tutorials/how-to-install-and-use-redis</pre>
+
+<p>To install the gems needed to get the app up and running:</p>
+
+<p>Run <code>bundle</code> or <code>bundle install</code> in the terminal</p>
+</li><li>
+<h3 id="label-E3-80-80Database+creation">　Database creation<span><a href="#label-E3-80-80Database+creation">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Database: MySQL. version used: 14.14 If you haven&#39;t done so already,
+install mysql-server and mysql.</p>
+
+<p>The following instructions are for Ubuntu 14.04</p>
+
+<pre>$ sudo apt-get update
+
+$ sudo apt-get install mysql-server mysql-client</pre>
+</li><li>
+<h3 id="label-E3-80-80Environment+variables">　Environment variables<span><a href="#label-E3-80-80Environment+variables">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>The application uses dotenv to manage sensitive data. Copy the example.env
+file into your own .env and fill in your own information. The MySQL
+credentials and GMail username and password are needed.</p>
+
+<pre>$ cp example.env .env</pre>
+</li><li>
+<h3 id="label-E3-80-80Database+initialization">　Database initialization<span><a href="#label-E3-80-80Database+initialization">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Setup the database</p>
+
+<pre>$ RAILS_ENV=development rake db:migrate
+
+$ RAILS_ENV=development rake db:seed</pre>
+
+<p>and finally, start the app:</p>
+
+<pre>$ RAILS_ENV=development rails server</pre>
+</li><li>
+<h3 id="label-E3-80-80Run+the+test+suite">　Run the test suite<span><a href="#label-E3-80-80Run+the+test+suite">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre>$ RAILS_ENV=test rake test</pre>
+</li><li>
+<h3 id="label-E3-80-80Services+">　Services <span><a href="#label-E3-80-80Services+">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>You don&#39;t need to worry about starting the Resque emailing jobs.</p>
+
+<p>Clicking on Add New <a href="Person.html">Person</a> in the index page will
+start the task.</p>
+</li><li>
+<h3 id="label-E3-80-80Delivery+Date">　Delivery Date<span><a href="#label-E3-80-80Delivery+Date">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>October 26, 2015</p>
+</li><li>
+<p>Documentation Code documentation is available under the doc/app directory</p>
+</li></ul>
 </main>
 
 
