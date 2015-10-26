@@ -4,6 +4,7 @@ require 'minitest/rails'
 class PersonTest < MiniTest::Unit::TestCase
   def setup
     @person = create(:person)
+    @routes = Rails.application.routes
   end
 
   def test_name

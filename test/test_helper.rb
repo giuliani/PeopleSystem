@@ -20,6 +20,8 @@ end
 # Minitest
 class Minitest::Unit::TestCase
   include FactoryGirl::Syntax::Methods
+  include ActiveSupport::Testing::SetupAndTeardown
+  include ActionController::TestCase::Behavior
 end
 
 # Minitest::Spec
