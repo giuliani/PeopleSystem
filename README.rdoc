@@ -1,28 +1,64 @@
-== README
+== PeopleSystem
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The People System App is a web application designed to manage people.  It uses the Rails MVC framework and
+architecture.  The index page shows the list of people in the system with information such as: full name, 
+email, age and a delete link to delete the person from the system.  Towards the end of the page you can find 
+a link to create a new person.  This will display a page with a blank form to fill in all the fields for that
+user. Validations are in place to check that first name, last name, email and birthdate are present. It also checks the email format, the picture uri format if present and if the birthdate is in the past.  From the list you can also click on the person's full name; this will take you to their profile page.  Here you'll find links to Edit, Delete and go back to the list of people.  The edit page has pre populated data from the person and validates the fields again to update properly.  You can cancel the process and go back to either the profile page or the list.  Finally, the application also sends out an email to all users in the system when a user is created or deleted.  The sending of the emails is only triggered when you click the link to create a new person in the List page, after that, all emails in queues will be sent inmediately without interfering with the application's performance.
 
-Things you may want to cover:
 
-* Ruby version
+* Ruby version 2.2, Rails version 4.2
 
 * System dependencies
+    
+    To install MySQL as the database follow the steps in Database Creation
+    
+    To install Redis follow the steps in this page
+      https://www.digitalocean.com/community/tutorials/how-to-install-and-use-redis
 
-* Configuration
+    To install the gems needed to get the app up and running:
+    
+      Run <tt>bundle</tt> or <tt>bundle install</tt> in the terminal
+
 
 * Database creation
+    Database: MySQL. version used: 14.14
+    If you haven't done so already, install mysql-server and mysql.  
+      The following instructions are for Ubuntu 14.04
+      
+      <tt>$ sudo apt-get update</tt>
+      
+      <tt>$ sudo apt-get install mysql-server mysql-client</tt>
+    
+* Environment variables
+    The application uses dotenv to manage sensitive data.
+    Copy the example.env file into your own .env and fill in your own information.
+    The MySQL credentials and GMail username and password are needed.
+    
+    <tt>$ cp example.env .env</tt>
 
 * Database initialization
 
-* How to run the test suite
+    Setup the database
+    
+    <tt>$ RAILS_ENV=development rake db:migrate</tt>
+    
+    <tt>$ RAILS_ENV=development rake db:seed</tt>
+    
+    and finally, start the app:
+    
+    <tt>$ RAILS_ENV=development rails server</tt>
 
-* Services (job queues, cache servers, search engines, etc.)
+* Run the test suite
+    <tt>$ RAILS_ENV=test rake test</tt>
 
-* Deployment instructions
+* Services 
+    You don't need to worry about starting the Resque emailing jobs.  
+    Clicking on Add New Person in the index page will start the task.
 
-* ...
+* Delivery Date
+    October 26, 2015
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Documentation
+    Code documentation is available under the doc/app directory
