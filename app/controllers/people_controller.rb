@@ -108,11 +108,11 @@ class PeopleController < ApplicationController
   #
   # Returns redirect to people url with the message.
   def destroy
+    @person.destroy
     Person.where.not(id: @person.id).each do | recipient |
       queue_hash = { :person => @person, :recipient_id => recipient.id }
       Resque.enqueue DeletedPersonMailer, queue_hash
     end
-    @person.destroy
     respond_to do |format|
       format.html { redirect_to people_url, notice: 'Person was successfully destroyed.' }
       format.json { head :no_content }
