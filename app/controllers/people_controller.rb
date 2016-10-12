@@ -33,8 +33,7 @@ class PeopleController < ApplicationController
   # GET /people/new
   def new
     @person = Person.new
-    ENV['QUEUES'] = '*'
-    render :new and Thread.new { Rake::Task["resque:work"].invoke }
+    render :new
   end
 
   # GET /people/1/edit
@@ -59,10 +58,6 @@ class PeopleController < ApplicationController
 
     respond_to do |format|
       if @person.save
-        Person.all.each do | recipient |
-          queue_hash = { :person_id => @person.id, :recipient_id => recipient.id }
-          Resque.enqueue CreatedPersonMailer, queue_hash
-        end
         format.html { redirect_to @person, notice: 'Person was successfully created.' }
         format.json { render :show, status: :created, location: @person }
       else
@@ -109,10 +104,6 @@ class PeopleController < ApplicationController
   # Returns redirect to people url with the message.
   def destroy
     @person.destroy
-    Person.where.not(id: @person.id).each do | recipient |
-      queue_hash = { :person => @person, :recipient_id => recipient.id }
-      Resque.enqueue DeletedPersonMailer, queue_hash
-    end
     respond_to do |format|
       format.html { redirect_to people_url, notice: 'Person was successfully destroyed.' }
       format.json { head :no_content }
