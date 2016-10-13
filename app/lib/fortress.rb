@@ -4,6 +4,10 @@ module Fortress
     def self.included(base)
       base.extend ClassMethods
     end
+    
+    def is_allowed_to?(*args)
+      false
+    end
 
     module ClassMethods
       def fencable
@@ -13,11 +17,6 @@ module Fortress
       end
     end
 
-    module InstanceMethods
-      def is_allowed_to?(*args)
-        true
-      end
-    end
-
   end
 end
+

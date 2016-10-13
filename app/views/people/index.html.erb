@@ -1,4 +1,9 @@
 <p id="notice"><%= notice %></p>
+<% if flash[:alert] %>
+  <div id="error_explanation">
+    <%= flash[:alert]%>
+  </div>
+<% end %>
 
 <h1>Listing People</h1>
 

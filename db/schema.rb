@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151023230344) do
+ActiveRecord::Schema.define(version: 20161012193427) do
+
+  create_table "bastions", force: :cascade do |t|
+    t.integer  "fortifiable_id",   limit: 4
+    t.string   "fortifiable_type", limit: 255
+    t.integer  "permission_id",    limit: 4
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "people", force: :cascade do |t|
     t.string   "first_name", limit: 75,    null: false
@@ -27,5 +35,30 @@ ActiveRecord::Schema.define(version: 20151023230344) do
   end
 
   add_index "people", ["email"], name: "index_people_on_email", unique: true, using: :btree
+
+  create_table "people_roles", force: :cascade do |t|
+    t.integer  "person_id",  limit: 4
+    t.integer  "role_id",    limit: 4
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "permissions", force: :cascade do |t|
+    t.string   "name",             limit: 255
+    t.text     "description",      limit: 65535
+    t.integer  "fortifiable_id",   limit: 4
+    t.string   "fortifiable_type", limit: 255
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "permissions", ["fortifiable_type", "fortifiable_id"], name: "index_permissions_on_fortifiable_type_and_fortifiable_id", using: :btree
+
+  create_table "roles", force: :cascade do |t|
+    t.string   "name",        limit: 255
+    t.text     "description", limit: 65535
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
 
 end

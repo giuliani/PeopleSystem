@@ -3,6 +3,8 @@ require 'uri'
 
 class Person < ActiveRecord::Base
 
+  include Fortress::Fortifiable
+
   validates :first_name, presence: true, length: { maximum: 75 }
   validates :last_name, presence: true, length: { maximum: 75 }
   validates :birthdate, presence: true

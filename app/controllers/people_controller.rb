@@ -28,10 +28,18 @@ class PeopleController < ApplicationController
   #
   # Returns all attributes for the person
   def show
+    unless $user.is_allowed_to?(:view_people)
+      flash[:alert] = 'You are not allowed to view people'
+      redirect_to action: 'index' and return
+    end
   end
 
   # GET /people/new
   def new
+    unless $user.is_allowed_to?(:create_people)
+      flash[:alert] = 'You are not allowed to create new people'
+      redirect_to action: 'index' and return
+    end
     @person = Person.new
     render :new
   end
@@ -103,6 +111,10 @@ class PeopleController < ApplicationController
   #
   # Returns redirect to people url with the message.
   def destroy
+    unless $user.is_allowed_to?(:destroy_people)
+      flash[:alert] = 'You are not allowed to delete people'
+      redirect_to action: 'index' and return
+    end
     @person.destroy
     respond_to do |format|
       format.html { redirect_to people_url, notice: 'Person was successfully destroyed.' }
