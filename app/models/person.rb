@@ -14,6 +14,9 @@ class Person < ActiveRecord::Base
   validate :birthdate_after_today
   validates_format_of :picture, :with => URI.regexp, allow_blank: true
 
+  has_many :people_roles
+  has_many :roles, through: :people_roles
+
   # Internal: Calculates the person's age based on birthdate.
   #
   # Examples
@@ -52,7 +55,7 @@ class Person < ActiveRecord::Base
   #
   # Returns the gender full name based on what is set.
   def full_gender_name
-    return "" unless !gender.nil?
+    return "" if gender.nil?
     case gender 
       when "m"
         return "male"
@@ -69,7 +72,7 @@ class Person < ActiveRecord::Base
 
   def birthdate_after_today
     errors.add(:birthdate, "can't be in the future") if
-      !birthdate.blank? and birthdate > Date.today
+      birthdate.present? and birthdate > Date.today
   end
 
 end
