@@ -47,6 +47,7 @@ group :development, :test do
   gem 'byebug'
   gem 'factory_girl_rails', '4.2.1'
   gem 'minitest-rails', '~> 2.2'
+  gem 'pry'
 end
 
 group :development do

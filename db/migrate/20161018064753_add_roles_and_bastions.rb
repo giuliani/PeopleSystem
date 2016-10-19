@@ -10,6 +10,7 @@ class AddRolesAndBastions < ActiveRecord::Migration
     
     execute "insert into bastions (fortifiable_id, fortifiable_type, permission_id) values (2, 'Role', 1)"
     execute "insert into bastions (fortifiable_id, fortifiable_type, permission_id) values (2, 'Role', 2)"
+    execute "insert into bastions (fortifiable_id, fortifiable_type, permission_id) values (1, 'Role', 4)"
 
   end
   
