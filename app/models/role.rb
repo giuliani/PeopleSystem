@@ -8,3 +8,4 @@ class Role < ActiveRecord::Base
   has_many :roles, through: :people_roles
 
 end
+
